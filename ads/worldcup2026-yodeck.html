@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1920,height=1080">
+<title>Gielty's — World Cup 2026 Live</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;600;700;900&display=swap');
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  width: 1920px;
+  height: 1080px;
+  overflow: hidden;
+  font-family: 'Inter', sans-serif;
+  background: #0a0a12;
+  position: relative;
+}
+
+.stadium-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 50% at 50% 20%, rgba(255,215,0,0.08) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 70% at 20% 50%, rgba(0,100,200,0.06) 0%, transparent 50%),
+    radial-gradient(ellipse 40% 70% at 80% 50%, rgba(0,100,200,0.06) 0%, transparent 50%),
+    radial-gradient(ellipse 100% 100% at 50% 100%, rgba(0,80,40,0.12) 0%, transparent 50%);
+}
+
+.spotlight {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.03) 0%, transparent 70%);
+  animation: spotlightMove 6s ease-in-out infinite;
+}
+
+.spotlight-1 { top: -200px; left: 10%; animation-delay: 0s; }
+.spotlight-2 { top: -200px; right: 10%; animation-delay: 2s; }
+.spotlight-3 { top: -100px; left: 40%; animation-delay: 4s; }
+
+@keyframes spotlightMove {
+  0%, 100% { opacity: 0.5; transform: translateY(0); }
+  50% { opacity: 1; transform: translateY(40px); }
+}
+
+.scanlines {
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(0deg, transparent, transparent 1px, rgba(0,0,0,0.04) 1px, rgba(0,0,0,0.04) 2px);
+  pointer-events: none;
+  z-index: 100;
+}
+
+.content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+/* Soccer Ball */
+.ball-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  opacity: 0;
+  animation: ballAppear 1s ease-out 0.5s forwards;
+}
+
+@keyframes ballAppear {
+  0% { opacity: 0; transform: translate(-50%, -50%) scale(0) rotate(-180deg); }
+  100% { opacity: 0.08; transform: translate(-50%, -50%) scale(1) rotate(0deg); }
+}
+
+.soccer-ball {
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 30% 30%, rgba(255,255,255,0.15) 0%, transparent 50%),
+    radial-gradient(circle at 70% 70%, rgba(255,255,255,0.05) 0%, transparent 50%);
+  border: 3px solid rgba(255,255,255,0.1);
+  position: relative;
+  animation: ballSpin 20s linear infinite;
+}
+
+@keyframes ballSpin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.pentagon {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background: rgba(255,255,255,0.08);
+  clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+}
+
+.pentagon:nth-child(1) { top: 40px; left: 50%; transform: translateX(-50%); }
+.pentagon:nth-child(2) { top: 35%; left: 10%; }
+.pentagon:nth-child(3) { top: 35%; right: 10%; }
+.pentagon:nth-child(4) { bottom: 15%; left: 25%; }
+.pentagon:nth-child(5) { bottom: 15%; right: 25%; }
+
+/* World Cup Year */
+.year-text {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 120px;
+  color: rgba(255,255,255,0.15);
+  letter-spacing: 60px;
+  position: absolute;
+  top: 80px;
+  opacity: 0;
+  animation: fadeIn 1s ease-out 0.3s forwards;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+.main-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 180px;
+  line-height: 0.9;
+  text-align: center;
+  letter-spacing: 14px;
+  color: transparent;
+  background: linear-gradient(180deg, #ffffff 0%, #ffd700 50%, #daa520 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  filter: drop-shadow(0 4px 30px rgba(255,215,0,0.3));
+  opacity: 0;
+  transform: translateY(40px);
+  animation: slideUp 0.8s ease-out 0.8s forwards;
+  z-index: 20;
+}
+
+.every-match {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 90px;
+  color: #fff;
+  letter-spacing: 20px;
+  margin-top: 10px;
+  opacity: 0;
+  animation: slideUp 0.7s ease-out 1.6s forwards;
+  text-shadow: 0 0 40px rgba(255,255,255,0.3);
+  z-index: 20;
+}
+
+@keyframes slideUp {
+  0% { opacity: 0; transform: translateY(40px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.prediction {
+  font-family: 'Inter', sans-serif;
+  font-size: 40px;
+  color: #ffd700;
+  font-weight: 600;
+  margin-top: 30px;
+  opacity: 0;
+  animation: slideUp 0.7s ease-out 2.2s forwards;
+  z-index: 20;
+}
+
+.dates {
+  font-family: 'Inter', sans-serif;
+  font-size: 34px;
+  color: rgba(255,255,255,0.6);
+  font-weight: 300;
+  margin-top: 12px;
+  letter-spacing: 4px;
+  opacity: 0;
+  animation: slideUp 0.7s ease-out 2.6s forwards;
+  z-index: 20;
+}
+
+/* Countdown */
+.countdown {
+  display: flex;
+  gap: 30px;
+  margin-top: 35px;
+  opacity: 0;
+  animation: slideUp 0.7s ease-out 3s forwards;
+  z-index: 20;
+}
+
+.countdown-unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.countdown-num {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 72px;
+  color: #fff;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,215,0,0.3);
+  border-radius: 12px;
+  width: 110px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.countdown-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  color: rgba(255,255,255,0.5);
+  margin-top: 8px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* Bottom Bar */
+.bottom-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 90px;
+  background: linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.9) 40%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  z-index: 50;
+  padding-top: 10px;
+  opacity: 0;
+  animation: slideUp 0.6s ease-out 3.4s forwards;
+}
+
+.bottom-bar .brand {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 36px;
+  color: #ffd700;
+  letter-spacing: 6px;
+}
+
+.bottom-bar .divider {
+  width: 2px;
+  height: 30px;
+  background: rgba(255,215,0,0.3);
+}
+
+.bottom-bar .info {
+  font-family: 'Inter', sans-serif;
+  font-size: 22px;
+  color: rgba(255,255,255,0.7);
+  font-weight: 300;
+}
+
+/* Green field line at bottom */
+.field-line {
+  position: absolute;
+  bottom: 90px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent 5%, rgba(0,180,80,0.4) 30%, rgba(0,180,80,0.4) 70%, transparent 95%);
+  z-index: 40;
+}
+
+/* Loop */
+.loop-container {
+  animation: loopReset 10s linear infinite;
+}
+
+@keyframes loopReset {
+  0% { opacity: 1; }
+  87% { opacity: 1; }
+  95% { opacity: 0; }
+  100% { opacity: 0; }
+}
+</style>
+</head>
+<body>
+<div class="stadium-bg"></div>
+<div class="spotlight spotlight-1"></div>
+<div class="spotlight spotlight-2"></div>
+<div class="spotlight spotlight-3"></div>
+<div class="scanlines"></div>
+
+<div class="loop-container">
+  <div class="ball-container">
+    <div class="soccer-ball">
+      <div class="pentagon"></div>
+      <div class="pentagon"></div>
+      <div class="pentagon"></div>
+      <div class="pentagon"></div>
+      <div class="pentagon"></div>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="main-title">WORLD CUP<br>2026</div>
+    <div class="every-match">EVERY MATCH LIVE</div>
+    <div class="prediction">Join our Prediction League — Beat the Bar!</div>
+    <div class="dates">JUNE 11 — JULY 19</div>
+    <div class="countdown" id="countdown">
+      <div class="countdown-unit">
+        <div class="countdown-num" id="cd-days">--</div>
+        <div class="countdown-label">Days</div>
+      </div>
+      <div class="countdown-unit">
+        <div class="countdown-num" id="cd-hours">--</div>
+        <div class="countdown-label">Hours</div>
+      </div>
+      <div class="countdown-unit">
+        <div class="countdown-num" id="cd-mins">--</div>
+        <div class="countdown-label">Mins</div>
+      </div>
+      <div class="countdown-unit">
+        <div class="countdown-num" id="cd-secs">--</div>
+        <div class="countdown-label">Secs</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="field-line"></div>
+
+  <div class="bottom-bar">
+    <div class="brand">GIELTY'S</div>
+    <div class="divider"></div>
+    <div class="info">Keel, Achill Island</div>
+    <div class="divider"></div>
+    <div class="info">gieltysbar.com</div>
+  </div>
+</div>
+
+<script>
+(function() {
+  const target = new Date('2026-06-11T00:00:00').getTime();
+
+  function update() {
+    const now = Date.now();
+    let diff = target - now;
+    if (diff < 0) diff = 0;
+
+    const days = Math.floor(diff / 86400000);
+    const hours = Math.floor((diff % 86400000) / 3600000);
+    const mins = Math.floor((diff % 3600000) / 60000);
+    const secs = Math.floor((diff % 60000) / 1000);
+
+    document.getElementById('cd-days').textContent = String(days).padStart(2, '0');
+    document.getElementById('cd-hours').textContent = String(hours).padStart(2, '0');
+    document.getElementById('cd-mins').textContent = String(mins).padStart(2, '0');
+    document.getElementById('cd-secs').textContent = String(secs).padStart(2, '0');
+  }
+
+  update();
+  setInterval(update, 1000);
+})();
+</script>
+</body>
+</html>

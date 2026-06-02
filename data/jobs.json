@@ -1,0 +1,59 @@
+{
+  "client_id": "gieltys",
+  "client_name": "Gielty's Clew Bay Bar & Restaurant",
+  "location": "Dooagh, Achill Island",
+  "recruitment_endpoint": "https://hooks.exposuresolutions.ie/recruitment",
+  "fallback_email": "info@gieltys.com",
+  "roles": [
+    {
+      "id": "gieltys-bar-staff",
+      "title": "Bar Staff",
+      "type": "Part-Time / Full-Time",
+      "description": "Serve drinks, prepare cocktails and Irish coffees, pull pints, and deliver great hospitality. Experience preferred but training provided for the right attitude.",
+      "requirements": ["Friendly and reliable", "Over 18", "Flexible hours including evenings and weekends", "Passion for hospitality"],
+      "perks": ["Tips", "Free shuttle bus home", "Staff meals", "Stunning workplace"],
+      "status": "hiring",
+      "posted": "2026-03-27"
+    },
+    {
+      "id": "gieltys-chef",
+      "title": "Chef / Kitchen Staff",
+      "type": "Full-Time / Seasonal",
+      "description": "Prepare fresh local seafood, Irish breakfasts, bar food, and our famous chowder. Work with produce from our own boat and local suppliers.",
+      "requirements": ["Kitchen experience preferred", "Food hygiene certification (or willingness to obtain)", "Ability to work under pressure", "Team player"],
+      "perks": ["Competitive pay", "Work with premium local ingredients", "Staff meals", "Year-round or seasonal options"],
+      "status": "hiring",
+      "posted": "2026-03-27"
+    },
+    {
+      "id": "gieltys-server",
+      "title": "Floor / Wait Staff",
+      "type": "Part-Time / Full-Time",
+      "description": "Table service in the restaurant and coffee shop. Greet guests, take orders, serve food, and ensure everyone leaves with a smile.",
+      "requirements": ["Friendly personality", "Ability to carry plates", "Some experience helpful", "Irish or English fluency"],
+      "perks": ["Tips", "Free shuttle bus home", "Staff meals", "Flexible scheduling"],
+      "status": "hiring",
+      "posted": "2026-03-27"
+    },
+    {
+      "id": "gieltys-coffee",
+      "title": "Coffee Shop / Barista",
+      "type": "Part-Time",
+      "description": "Morning and daytime shifts in our coffee shop overlooking Clew Bay. Serve breakfast, light bites, and coffee to tourists and locals.",
+      "requirements": ["Barista experience a plus", "Morning availability", "Friendly and efficient", "Clean and presentable"],
+      "perks": ["Daytime hours only", "Amazing views from your workplace", "Staff meals", "Tips"],
+      "status": "upcoming",
+      "posted": "2026-03-27"
+    },
+    {
+      "id": "gieltys-events",
+      "title": "Events / Function Coordinator",
+      "type": "Part-Time / Seasonal",
+      "description": "Coordinate private events, weddings, and functions in our 180-capacity room. Liaise with clients, manage bookings, and ensure smooth events.",
+      "requirements": ["Organisational skills", "Client-facing experience", "Availability for evening/weekend events", "Initiative and problem-solving"],
+      "perks": ["Varied and rewarding work", "Build event management experience", "Competitive pay"],
+      "status": "upcoming",
+      "posted": "2026-03-27"
+    }
+  ]
+}

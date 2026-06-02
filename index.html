@@ -1,0 +1,1271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gielty's Bar & Restaurant | Achill Island | The Most Westerly Pub in Europe</title>
+    <meta name="description" content="Gielty's Clew Bay Bar & Restaurant — the most westerly pub in Europe. Fresh local seafood, nightly trad sessions, stunning Clew Bay views. Dooagh, Achill Island.">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Gielty's Bar & Restaurant">
+    <meta name="geo.region" content="IE-MO">
+    <meta name="geo.placename" content="Dooagh, Achill Island, County Mayo">
+    <meta name="geo.position" content="53.973304;-10.136733">
+    <meta name="ICBM" content="53.973304, -10.136733">
+    <link rel="canonical" href="https://www.gieltys.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Gielty's Bar & Restaurant | The Most Westerly Pub in Europe">
+    <meta property="og:description" content="Fresh local seafood, nightly trad sessions, stunning Clew Bay views. Dooagh, Achill Island on the Wild Atlantic Way.">
+    <meta property="og:url" content="https://www.gieltys.com/">
+    <meta property="og:site_name" content="Gielty's Bar & Restaurant">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Gielty's | The Most Westerly Pub in Europe">
+    <meta name="twitter:description" content="Fresh local seafood, nightly trad sessions, Clew Bay views. Achill Island.">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer=window.dataLayer||[];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js',new Date());
+        gtag('config','G-XXXXXXXXXX',{page_title:'Home',page_location:window.location.href,send_page_view:true});
+        (function(){var p=new URLSearchParams(window.location.search);['utm_source','utm_medium','utm_campaign','utm_content','utm_term'].forEach(function(k){if(p.get(k))sessionStorage.setItem(k,p.get(k));});})();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'navy': '#1e3a5f',
+                        'navy-deep': '#0f2440',
+                        'navy-light': '#2a4f7a',
+                        'gold': '#d4a843',
+                        'gold-light': '#e8c76a',
+                        'gold-dark': '#b8922e',
+                        'cream': '#FFF8F0',
+                        'cream-dark': '#f0e6d6',
+                        'warm-dark': '#0a1628',
+                    },
+                    fontFamily: {
+                        'playfair': ['Playfair Display', 'serif'],
+                        'inter': ['Inter', 'system-ui', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        body { font-family: 'Inter', system-ui, sans-serif; background: #0a1628; color: #fff; overflow-x: hidden; }
+        .font-playfair { font-family: 'Playfair Display', serif; }
+
+        /* --- Scroll Progress Bar --- */
+        #scroll-progress {
+            position: fixed; top: 0; left: 0; height: 3px; z-index: 9999;
+            background: linear-gradient(90deg, #d4a843, #e8c76a, #d4a843);
+            width: 0%; transition: width .1s linear;
+        }
+
+        /* --- Scroll Reveal System --- */
+        [data-reveal] {
+            opacity: 0; transform: translateY(40px);
+            transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+        }
+        [data-reveal].revealed { opacity: 1; transform: none; }
+        [data-reveal="fade-left"] { transform: translateX(-40px); }
+        [data-reveal="fade-left"].revealed { transform: none; }
+        [data-reveal="fade-right"] { transform: translateX(40px); }
+        [data-reveal="fade-right"].revealed { transform: none; }
+        [data-reveal="fade-scale"] { transform: scale(.92); }
+        [data-reveal="fade-scale"].revealed { transform: none; }
+        [data-stagger] > * { opacity: 0; transform: translateY(30px);
+            transition: opacity .6s cubic-bezier(.16,1,.3,1), transform .6s cubic-bezier(.16,1,.3,1);
+        }
+        [data-stagger].revealed > * { opacity: 1; transform: none; }
+        [data-stagger].revealed > *:nth-child(1) { transition-delay: 0s; }
+        [data-stagger].revealed > *:nth-child(2) { transition-delay: .12s; }
+        [data-stagger].revealed > *:nth-child(3) { transition-delay: .24s; }
+        [data-stagger].revealed > *:nth-child(4) { transition-delay: .36s; }
+        [data-stagger].revealed > *:nth-child(5) { transition-delay: .48s; }
+        [data-stagger].revealed > *:nth-child(6) { transition-delay: .6s; }
+        [data-stagger].revealed > *:nth-child(7) { transition-delay: .72s; }
+        [data-stagger].revealed > *:nth-child(8) { transition-delay: .84s; }
+
+        /* --- Nav --- */
+        .nav-transparent { background: transparent; border-color: transparent; backdrop-filter: none; }
+        .nav-solid { background: rgba(10,22,40,.92); backdrop-filter: blur(20px); border-color: rgba(212,168,67,.15); }
+
+        /* --- Hero Gradient Mesh --- */
+        .hero-mesh {
+            background:
+                radial-gradient(ellipse 80% 60% at 20% 30%, rgba(30,58,95,.9) 0%, transparent 70%),
+                radial-gradient(ellipse 60% 50% at 80% 70%, rgba(15,36,64,.8) 0%, transparent 70%),
+                radial-gradient(ellipse 50% 40% at 50% 50%, rgba(212,168,67,.08) 0%, transparent 60%),
+                linear-gradient(160deg, #0a1628 0%, #1e3a5f 40%, #0f2440 70%, #0a1628 100%);
+        }
+        .hero-orb {
+            position: absolute; border-radius: 50%; filter: blur(60px); opacity: .3;
+            animation: orbFloat 8s ease-in-out infinite;
+        }
+        @keyframes orbFloat {
+            0%, 100% { transform: translate(0,0) scale(1); }
+            33% { transform: translate(30px,-20px) scale(1.1); }
+            66% { transform: translate(-20px,15px) scale(.95); }
+        }
+
+        /* --- Shimmer Text --- */
+        .shimmer-text {
+            background: linear-gradient(110deg, #fff 0%, #fff 40%, #d4a843 50%, #fff 60%, #fff 100%);
+            background-size: 200% 100%;
+            -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+            animation: shimmer 4s ease-in-out infinite;
+        }
+        @keyframes shimmer {
+            0% { background-position: 200% center; }
+            100% { background-position: -200% center; }
+        }
+
+        /* --- Typed Cursor --- */
+        .typed-cursor { display: inline-block; width: 2px; height: 1em; background: #d4a843;
+            margin-left: 4px; vertical-align: text-bottom; animation: blink .8s step-end infinite; }
+        @keyframes blink { 0%,100%{opacity:1;} 50%{opacity:0;} }
+
+        /* --- Scroll Indicator --- */
+        .scroll-indicator { animation: scrollBounce 2s ease-in-out infinite; }
+        @keyframes scrollBounce {
+            0%,20%,50%,80%,100% { transform: translateY(0); }
+            40% { transform: translateY(12px); }
+            60% { transform: translateY(6px); }
+        }
+
+        /* --- Glassmorphism Cards --- */
+        .glass-card {
+            background: rgba(30,58,95,.25);
+            backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(212,168,67,.12);
+            border-radius: 1rem;
+            transition: transform .35s cubic-bezier(.16,1,.3,1), box-shadow .35s ease, border-color .35s ease;
+        }
+        .glass-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 60px rgba(0,0,0,.35), 0 0 30px rgba(212,168,67,.08);
+            border-color: rgba(212,168,67,.3);
+        }
+
+        /* --- Premium Buttons --- */
+        .btn-primary {
+            background: linear-gradient(135deg, #d4a843, #b8922e);
+            color: #0a1628; font-weight: 700; border-radius: 9999px;
+            transition: transform .25s ease, box-shadow .25s ease;
+        }
+        .btn-primary:hover { transform: scale(1.04); box-shadow: 0 8px 30px rgba(212,168,67,.35); }
+        .btn-outline {
+            border: 2px solid rgba(212,168,67,.4); color: #d4a843; border-radius: 9999px;
+            transition: transform .25s ease, border-color .25s ease, background .25s ease;
+        }
+        .btn-outline:hover { border-color: #d4a843; background: rgba(212,168,67,.08); transform: scale(1.04); }
+
+        /* --- Animated Underline Links --- */
+        .link-underline { position: relative; display: inline-block; }
+        .link-underline::after {
+            content: ''; position: absolute; bottom: -2px; left: 0; width: 0; height: 2px;
+            background: #d4a843; transition: width .3s ease;
+        }
+        .link-underline:hover::after { width: 100%; }
+
+        /* --- Polaroid Gallery Cards --- */
+        .polaroid {
+            background: #fff; padding: 10px 10px 40px 10px; border-radius: 2px;
+            box-shadow: 0 4px 20px rgba(0,0,0,.3); transform: rotate(var(--rot, 0deg));
+            transition: transform .4s ease, box-shadow .4s ease;
+        }
+        .polaroid:hover { transform: rotate(0deg) scale(1.05); box-shadow: 0 12px 40px rgba(0,0,0,.4); }
+
+        /* --- Section Divider --- */
+        .section-gold-line { width: 60px; height: 3px; background: linear-gradient(90deg, #d4a843, #e8c76a); border-radius: 2px; }
+
+        /* --- Counter Number --- */
+        .counter-num { font-variant-numeric: tabular-nums; }
+
+        /* --- Form Focus --- */
+        .form-input:focus { outline: none; border-color: #d4a843; box-shadow: 0 0 0 3px rgba(212,168,67,.2); }
+
+        /* --- Respect reduced motion --- */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important; }
+            [data-reveal] { opacity: 1; transform: none; }
+            [data-stagger] > * { opacity: 1; transform: none; }
+            .shimmer-text { animation: none; -webkit-text-fill-color: #fff; }
+            .hero-orb { animation: none; }
+            .scroll-indicator { animation: none; }
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Restaurant",
+        "name": "Gielty's Clew Bay Bar & Restaurant",
+        "alternateName": "Gielty's",
+        "description": "The most westerly pub in Europe. Third-generation family-run bar, restaurant and coffee shop on Achill Island, Wild Atlantic Way.",
+        "url": "https://www.gieltys.com",
+        "telephone": "+353-98-43119",
+        "email": "info@gieltys.com",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Keelwest, Dooagh",
+            "addressLocality": "Achill Island",
+            "addressRegion": "County Mayo",
+            "postalCode": "F28 F6C1",
+            "addressCountry": "IE"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 53.973304,
+            "longitude": -10.136733
+        },
+        "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+            "opens": "10:00",
+            "closes": "22:00"
+        },
+        "servesCuisine": ["Irish", "Seafood", "European"],
+        "priceRange": "€€",
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.35",
+            "reviewCount": "1764",
+            "bestRating": "5"
+        },
+        "hasMenu": "https://www.gieltys.com/menu",
+        "acceptsReservations": "True",
+        "amenityFeature": [
+            {"@type": "LocationFeatureSpecification", "name": "Live Music", "value": true},
+            {"@type": "LocationFeatureSpecification", "name": "EV Charging", "value": true},
+            {"@type": "LocationFeatureSpecification", "name": "Free Shuttle Bus", "value": true},
+            {"@type": "LocationFeatureSpecification", "name": "Outdoor Seating", "value": true},
+            {"@type": "LocationFeatureSpecification", "name": "Function Room", "value": true}
+        ]
+    }
+    </script>
+</head>
+<body>
+
+<!-- Scroll Progress Bar -->
+<div id="scroll-progress" aria-hidden="true"></div>
+
+<!-- ===================== NAVIGATION ===================== -->
+<nav id="main-nav" class="fixed top-0 w-full z-50 nav-transparent border-b transition-all duration-500">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16 md:h-20">
+            <a href="/" class="flex items-center gap-3 group">
+                <span class="font-playfair text-xl md:text-2xl font-bold text-white tracking-wide">GIELTY'S</span>
+                <span class="text-gold font-bold text-[10px] tracking-[0.25em] hidden sm:inline opacity-70 group-hover:opacity-100 transition-opacity">CLEW BAY</span>
+            </a>
+            <div class="hidden lg:flex items-center gap-5 text-sm font-medium">
+                <a href="#tonight" class="nav-link link-underline text-white/80 hover:text-white transition-colors py-1">Tonight</a>
+                <a href="#menu-highlights" class="nav-link link-underline text-white/80 hover:text-white transition-colors py-1">Menu</a>
+                <a href="#music" class="nav-link link-underline text-white/80 hover:text-white transition-colors py-1">Music &amp; Events</a>
+                <a href="#gift-vouchers" class="nav-link link-underline text-white/80 hover:text-white transition-colors py-1">Gift Vouchers</a>
+                <a href="https://exposuresolutions.ie/games-hub.html?venue=gieltys" target="_blank" rel="noopener" class="nav-link link-underline text-white/80 hover:text-white transition-colors py-1 inline-flex items-center gap-1.5">
+                    Game Zone <span class="text-[9px] font-bold uppercase tracking-wide px-1.5 py-0.5 rounded-full bg-gold/15 text-gold border border-gold/25 leading-none">New</span>
+                </a>
+                <a href="#our-story" class="nav-link link-underline text-white/80 hover:text-white transition-colors py-1">Our Story</a>
+                <a href="#community" class="nav-link link-underline text-white/80 hover:text-white transition-colors py-1">Achill</a>
+                <a href="#find-us" class="nav-link link-underline text-white/80 hover:text-white transition-colors py-1">Find Us</a>
+                <a href="/book" class="btn-primary px-6 py-2.5 text-sm ml-2">Book a Table</a>
+            </div>
+            <button id="mobileMenuBtn" class="lg:hidden text-white p-2 hover:text-gold transition-colors" aria-label="Open menu">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+            </button>
+        </div>
+    </div>
+    <div id="mobileMenu" class="hidden lg:hidden border-t border-gold/10" style="background:rgba(10,22,40,.97);backdrop-filter:blur(20px);">
+        <div class="px-6 py-5 space-y-1">
+            <a href="#tonight" class="mobile-nav block py-2.5 text-white/70 hover:text-gold transition-colors font-medium">Tonight at Gielty's</a>
+            <a href="#menu-highlights" class="mobile-nav block py-2.5 text-white/70 hover:text-gold transition-colors font-medium">Menu</a>
+            <a href="#music" class="mobile-nav block py-2.5 text-white/70 hover:text-gold transition-colors font-medium">Music &amp; Events</a>
+            <a href="#gift-vouchers" class="mobile-nav block py-2.5 text-white/70 hover:text-gold transition-colors font-medium">Gift Vouchers</a>
+            <a href="https://exposuresolutions.ie/games-hub.html?venue=gieltys" target="_blank" rel="noopener" class="mobile-nav block py-2.5 text-white/70 hover:text-gold transition-colors font-medium">
+                Game Zone <span class="text-[9px] font-bold uppercase px-1.5 py-0.5 rounded-full bg-gold/20 text-gold ml-1">New</span>
+            </a>
+            <a href="#our-story" class="mobile-nav block py-2.5 text-white/70 hover:text-gold transition-colors font-medium">Our Story</a>
+            <a href="#community" class="mobile-nav block py-2.5 text-white/70 hover:text-gold transition-colors font-medium">Explore Achill</a>
+            <a href="#find-us" class="mobile-nav block py-2.5 text-white/70 hover:text-gold transition-colors font-medium">Find Us</a>
+            <a href="/jobs" class="mobile-nav block py-2.5 text-white/70 hover:text-gold transition-colors font-medium">Jobs</a>
+            <div class="pt-3">
+                <a href="/book" class="btn-primary block text-center px-6 py-3 text-sm">Book a Table</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- ===================== HERO ===================== -->
+<section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0 hero-mesh"></div>
+    <div class="hero-orb" style="width:400px;height:400px;background:radial-gradient(circle,rgba(212,168,67,.25),transparent 70%);top:10%;left:5%;animation-delay:0s;"></div>
+    <div class="hero-orb" style="width:300px;height:300px;background:radial-gradient(circle,rgba(212,168,67,.15),transparent 70%);bottom:15%;right:10%;animation-delay:-3s;"></div>
+    <div class="hero-orb" style="width:200px;height:200px;background:radial-gradient(circle,rgba(232,199,106,.2),transparent 70%);top:50%;left:60%;animation-delay:-5s;"></div>
+    <div class="hero-orb" style="width:350px;height:350px;background:radial-gradient(circle,rgba(30,58,95,.5),transparent 70%);bottom:5%;left:30%;animation-delay:-2s;"></div>
+
+    <div class="relative z-10 text-center px-4 max-w-5xl mx-auto pt-20 pb-12">
+        <p data-reveal class="text-gold tracking-[0.35em] uppercase text-xs md:text-sm font-semibold mb-6">
+            Dooagh, Achill Island &bull; Wild Atlantic Way
+        </p>
+        <h1 data-reveal class="font-playfair text-5xl sm:text-6xl md:text-8xl font-bold leading-[1.05] mb-6">
+            <span class="shimmer-text">Gielty's</span>
+        </h1>
+        <p data-reveal class="font-playfair text-xl sm:text-2xl md:text-3xl text-white/80 italic mb-8">
+            The Most Westerly Pub in Europe
+        </p>
+        <div data-reveal class="text-lg md:text-xl text-gold/90 h-8 mb-10 font-medium">
+            <span id="typed-text"></span><span class="typed-cursor"></span>
+        </div>
+        <p data-reveal class="text-base md:text-lg text-white/60 max-w-2xl mx-auto mb-10 leading-relaxed">
+            Third-generation family pub. Fresh seafood from our own boat.
+            Nightly trad sessions. Panoramic Clew Bay views.
+        </p>
+        <div data-reveal class="flex flex-col sm:flex-row gap-4 justify-center mb-10">
+            <a href="/book" class="btn-primary px-10 py-4 text-lg">Book a Table</a>
+            <a href="#menu-highlights" class="btn-outline px-10 py-4 text-lg">View Menu</a>
+        </div>
+        <div data-reveal class="flex items-center justify-center gap-3 text-white/50 text-sm">
+            <span class="text-gold text-lg tracking-wider">&#9733;&#9733;&#9733;&#9733;</span>
+            <span>4.35 from 1,700+ reviews</span>
+        </div>
+    </div>
+
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 scroll-indicator">
+        <div class="flex flex-col items-center gap-2 text-white/30">
+            <span class="text-[10px] uppercase tracking-[0.3em]">Scroll</span>
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
+        </div>
+    </div>
+</section>
+
+<!-- ===================== STATS COUNTER ===================== -->
+<section class="py-16 px-4 relative overflow-hidden" style="background:linear-gradient(180deg,#0a1628 0%,rgba(30,58,95,.15) 50%,#0a1628 100%);">
+    <div class="max-w-5xl mx-auto">
+        <div data-reveal data-stagger class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 text-center">
+            <div class="glass-card p-6 md:p-8">
+                <div class="font-playfair text-3xl md:text-5xl font-bold text-gold counter-num" data-count="97" data-suffix="+">0</div>
+                <p class="text-white/50 text-xs md:text-sm mt-2 uppercase tracking-wider">Years of Heritage</p>
+            </div>
+            <div class="glass-card p-6 md:p-8">
+                <div class="font-playfair text-3xl md:text-5xl font-bold text-gold counter-num" data-count="6">0</div>
+                <p class="text-white/50 text-xs md:text-sm mt-2 uppercase tracking-wider">Live Music Nights/Wk</p>
+            </div>
+            <div class="glass-card p-6 md:p-8">
+                <div class="font-playfair text-3xl md:text-5xl font-bold text-gold counter-num" data-count="50" data-suffix="m">0</div>
+                <p class="text-white/50 text-xs md:text-sm mt-2 uppercase tracking-wider">From the Atlantic</p>
+            </div>
+            <div class="glass-card p-6 md:p-8">
+                <div class="font-playfair text-3xl md:text-5xl font-bold text-gold counter-num" data-count="1764">0</div>
+                <p class="text-white/50 text-xs md:text-sm mt-2 uppercase tracking-wider">5-Star Reviews</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===================== FEATURE CARDS ===================== -->
+<section class="py-20 px-4 bg-warm-dark">
+    <div class="max-w-6xl mx-auto">
+        <div data-reveal data-stagger class="grid md:grid-cols-3 gap-6">
+            <a href="/menu" class="glass-card p-8 block group">
+                <div class="text-4xl mb-5 transform group-hover:scale-110 transition-transform duration-300">&#127843;</div>
+                <h2 class="font-playfair text-xl font-bold mb-3 text-white group-hover:text-gold transition-colors">Fresh From Achill</h2>
+                <p class="text-white/60 text-sm leading-relaxed mb-4">Seafood from our own boat, locally sourced produce, and our famous chowder. Breakfast from 10am, dinner til late.</p>
+                <span class="text-gold text-sm font-semibold link-underline">View Menu &rarr;</span>
+            </a>
+            <a href="#music" class="glass-card p-8 block group">
+                <div class="text-4xl mb-5 transform group-hover:scale-110 transition-transform duration-300">&#127925;</div>
+                <h2 class="font-playfair text-xl font-bold mb-3 text-white group-hover:text-gold transition-colors">Live Trad Sessions</h2>
+                <p class="text-white/60 text-sm leading-relaxed mb-4">Traditional Irish music most evenings of the week. Pull up a stool beside the turf fire and enjoy the craic.</p>
+                <span class="text-gold text-sm font-semibold link-underline">What's On &rarr;</span>
+            </a>
+            <a href="#find-us" class="glass-card p-8 block group">
+                <div class="text-4xl mb-5 transform group-hover:scale-110 transition-transform duration-300">&#128656;</div>
+                <h2 class="font-playfair text-xl font-bold mb-3 text-white group-hover:text-gold transition-colors">Free Shuttle Bus</h2>
+                <p class="text-white/60 text-sm leading-relaxed mb-4">Award-winning shuttle service. We'll collect you from anywhere on Achill and get you home safely. No worries.</p>
+                <span class="text-gold text-sm font-semibold link-underline">Find Us &rarr;</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ===================== TONIGHT AT GIELTY'S ===================== -->
+<section id="tonight" class="py-20 px-4 relative" style="background:linear-gradient(180deg,#0a1628,rgba(30,58,95,.1),#0a1628);">
+    <div class="max-w-5xl mx-auto">
+        <div class="text-center mb-12" data-reveal>
+            <p class="text-gold tracking-[0.3em] uppercase text-xs font-semibold mb-3">Right Now</p>
+            <h2 class="font-playfair text-3xl md:text-5xl font-bold mb-3">Tonight at Gielty's</h2>
+            <div class="section-gold-line mx-auto mt-4"></div>
+        </div>
+        <div data-reveal data-stagger class="grid md:grid-cols-3 gap-6">
+            <div class="glass-card p-7 text-center">
+                <div class="text-3xl mb-3">&#127926;</div>
+                <h3 class="font-playfair text-lg font-bold mb-2" id="tonight-music-title">Live Trad Session</h3>
+                <p class="text-gold text-sm font-semibold mb-2" id="tonight-music-time">9pm &ndash; Late</p>
+                <p class="text-white/50 text-sm" id="tonight-music-desc">Local musicians gather for a night of traditional Irish music. Pull up a stool.</p>
+            </div>
+            <div class="glass-card p-7 text-center">
+                <div class="text-3xl mb-3">&#127858;</div>
+                <h3 class="font-playfair text-lg font-bold mb-2">Food Special</h3>
+                <p class="text-gold text-sm font-semibold mb-2" id="tonight-food">Atlantic Seafood Chowder &amp; Brown Bread &mdash; &euro;14.50</p>
+                <p class="text-white/50 text-sm">Fresh from our own boat this morning. Ask your server about today's catch.</p>
+            </div>
+            <div class="glass-card p-7 text-center">
+                <div class="text-3xl mb-3">&#127866;</div>
+                <h3 class="font-playfair text-lg font-bold mb-2">Drink of the Evening</h3>
+                <p class="text-gold text-sm font-semibold mb-2" id="tonight-drink">Craft Beer Flight &mdash; &euro;12</p>
+                <p class="text-white/50 text-sm">Four hand-picked Irish craft beers. Try something new from the West.</p>
+            </div>
+        </div>
+        <div data-reveal class="text-center mt-10">
+            <a href="/book" class="btn-primary px-8 py-3 text-sm inline-block">Reserve Your Spot Tonight</a>
+        </div>
+    </div>
+</section>
+
+<!-- ===================== MENU HIGHLIGHTS ===================== -->
+<section id="menu-highlights" class="py-20 px-4 bg-warm-dark">
+    <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-14" data-reveal>
+            <p class="text-gold tracking-[0.3em] uppercase text-xs font-semibold mb-3">From Our Kitchen</p>
+            <h2 class="font-playfair text-3xl md:text-5xl font-bold mb-3">Signature Dishes</h2>
+            <p class="text-white/50 max-w-xl mx-auto text-sm mt-4">Locally sourced, lovingly prepared. Every dish tells a story of Achill's land and sea.</p>
+            <div class="section-gold-line mx-auto mt-5"></div>
+        </div>
+        <div data-reveal data-stagger class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="glass-card overflow-hidden group">
+                <div class="h-44 flex items-center justify-center text-6xl" style="background:linear-gradient(135deg,rgba(212,168,67,.08),rgba(30,58,95,.3));">
+                    &#129367;
+                </div>
+                <div class="p-6">
+                    <h3 class="font-playfair text-lg font-bold mb-1 group-hover:text-gold transition-colors">The Gielty's Platter</h3>
+                    <p class="text-white/50 text-sm mb-3">Smoked salmon, crab claws, prawns, brown bread &amp; homemade dips</p>
+                    <p class="text-gold font-bold">&euro;28</p>
+                </div>
+            </div>
+            <div class="glass-card overflow-hidden group">
+                <div class="h-44 flex items-center justify-center text-6xl" style="background:linear-gradient(135deg,rgba(212,168,67,.1),rgba(30,58,95,.25));">
+                    &#127858;
+                </div>
+                <div class="p-6">
+                    <h3 class="font-playfair text-lg font-bold mb-1 group-hover:text-gold transition-colors">Atlantic Seafood Chowder</h3>
+                    <p class="text-white/50 text-sm mb-3">Our award-winning chowder with crusty brown bread &amp; herb butter</p>
+                    <p class="text-gold font-bold">&euro;14.50</p>
+                </div>
+            </div>
+            <div class="glass-card overflow-hidden group">
+                <div class="h-44 flex items-center justify-center text-6xl" style="background:linear-gradient(135deg,rgba(212,168,67,.08),rgba(30,58,95,.3));">
+                    &#127830;
+                </div>
+                <div class="p-6">
+                    <h3 class="font-playfair text-lg font-bold mb-1 group-hover:text-gold transition-colors">Achill Island Lamb</h3>
+                    <p class="text-white/50 text-sm mb-3">Slow-roasted Achill lamb, colcannon, seasonal veg &amp; rosemary jus</p>
+                    <p class="text-gold font-bold">&euro;24</p>
+                </div>
+            </div>
+            <div class="glass-card overflow-hidden group">
+                <div class="h-44 flex items-center justify-center text-6xl" style="background:linear-gradient(135deg,rgba(212,168,67,.1),rgba(30,58,95,.25));">
+                    &#127867;
+                </div>
+                <div class="p-6">
+                    <h3 class="font-playfair text-lg font-bold mb-1 group-hover:text-gold transition-colors">Craft Beer Flight</h3>
+                    <p class="text-white/50 text-sm mb-3">Four hand-selected Irish craft beers from local breweries</p>
+                    <p class="text-gold font-bold">&euro;12</p>
+                </div>
+            </div>
+        </div>
+        <div data-reveal class="text-center mt-10">
+            <a href="/menu" class="btn-outline px-8 py-3 text-sm inline-block">View Full Menu &rarr;</a>
+        </div>
+    </div>
+</section>
+
+<!-- ===================== GAME ZONE ===================== -->
+<section class="py-16 px-4 relative overflow-hidden" style="background:linear-gradient(180deg,#0a1628,rgba(30,58,95,.12),#0a1628);">
+    <div class="max-w-3xl mx-auto text-center" data-reveal>
+        <p class="text-gold tracking-[0.3em] uppercase text-xs font-semibold mb-3">Entertainment</p>
+        <h2 class="font-playfair text-2xl md:text-3xl font-bold mb-4">Play AI Quiz, Icebreakers &amp; More</h2>
+        <p class="text-white/50 text-sm mb-6 max-w-lg mx-auto">Quick fun from your phone — perfect while you wait for a table or between tunes. Trivia nights, tournament challenges, and craic generators.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="https://exposuresolutions.ie/games-hub.html?venue=gieltys" target="_blank" rel="noopener" class="btn-outline px-6 py-3 text-sm inline-flex items-center justify-center gap-2">
+                &#127918; Open Game Zone
+            </a>
+            <a href="#craic-corner" class="btn-outline px-6 py-3 text-sm inline-flex items-center justify-center gap-2">
+                &#127922; Trivia Night Signup
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ===================== MUSIC & EVENTS + RSVP ===================== -->
+<section id="music" class="py-20 px-4 bg-warm-dark">
+    <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-14" data-reveal>
+            <p class="text-gold tracking-[0.3em] uppercase text-xs font-semibold mb-3">Music &amp; Events</p>
+            <h2 class="font-playfair text-3xl md:text-5xl font-bold mb-3">The Sound of Achill</h2>
+            <p class="text-white/50 max-w-xl mx-auto text-sm mt-4">From intimate trad sessions to wild Saturday nights — there's always something on at Gielty's.</p>
+            <div class="section-gold-line mx-auto mt-5"></div>
+        </div>
+        <div class="grid lg:grid-cols-2 gap-8">
+            <div data-reveal="fade-left">
+                <h3 class="font-playfair text-xl font-bold mb-6 text-gold">Weekly Sessions</h3>
+                <div class="space-y-4" data-stagger>
+                    <div class="glass-card p-5 flex items-center gap-4">
+                        <div class="w-14 h-14 rounded-lg bg-gold/10 flex items-center justify-center text-2xl flex-shrink-0">&#127931;</div>
+                        <div>
+                            <p class="font-semibold text-sm">Trad Session Tuesdays</p>
+                            <p class="text-white/50 text-xs">Local musicians, open session from 9pm. All welcome.</p>
+                        </div>
+                    </div>
+                    <div class="glass-card p-5 flex items-center gap-4">
+                        <div class="w-14 h-14 rounded-lg bg-gold/10 flex items-center justify-center text-2xl flex-shrink-0">&#127928;</div>
+                        <div>
+                            <p class="font-semibold text-sm">Acoustic Wednesdays</p>
+                            <p class="text-white/50 text-xs">Singer-songwriters and solo performers. Intimate vibes.</p>
+                        </div>
+                    </div>
+                    <div class="glass-card p-5 flex items-center gap-4">
+                        <div class="w-14 h-14 rounded-lg bg-gold/10 flex items-center justify-center text-2xl flex-shrink-0">&#127929;</div>
+                        <div>
+                            <p class="font-semibold text-sm">Friday &amp; Saturday Live</p>
+                            <p class="text-white/50 text-xs">Full bands, Irish trad, rock &amp; folk. The place to be on Achill.</p>
+                        </div>
+                    </div>
+                    <div class="glass-card p-5 flex items-center gap-4">
+                        <div class="w-14 h-14 rounded-lg bg-gold/10 flex items-center justify-center text-2xl flex-shrink-0">&#9728;&#65039;</div>
+                        <div>
+                            <p class="font-semibold text-sm">Sunday Sessions</p>
+                            <p class="text-white/50 text-xs">Afternoon trad from 4pm. Roast dinner &amp; a pint &mdash; the Achill way.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div data-reveal="fade-right">
+                <h3 class="font-playfair text-xl font-bold mb-6 text-gold">Reserve Your Spot</h3>
+                <div class="glass-card p-8">
+                    <p class="text-white/60 text-sm mb-6">Big night coming up? Grab your seat early. Fill in below and we'll confirm your spot.</p>
+                    <form id="rsvp-form" class="space-y-4">
+                        <input type="text" name="name" required placeholder="Your Name" class="form-input w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-sm text-white placeholder-white/30 transition-all">
+                        <input type="email" name="email" required placeholder="Email Address" class="form-input w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-sm text-white placeholder-white/30 transition-all">
+                        <input type="tel" name="phone" placeholder="Phone (optional)" class="form-input w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-sm text-white placeholder-white/30 transition-all">
+                        <select name="event" required class="form-input w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-sm text-white/70 transition-all">
+                            <option value="" class="bg-navy-deep">Select Event</option>
+                            <option value="trad-tuesday" class="bg-navy-deep">Trad Session Tuesday</option>
+                            <option value="acoustic-wednesday" class="bg-navy-deep">Acoustic Wednesday</option>
+                            <option value="friday-live" class="bg-navy-deep">Friday Live</option>
+                            <option value="saturday-live" class="bg-navy-deep">Saturday Live</option>
+                            <option value="sunday-session" class="bg-navy-deep">Sunday Session</option>
+                            <option value="special-event" class="bg-navy-deep">Special Event</option>
+                        </select>
+                        <input type="number" name="guests" min="1" max="20" placeholder="Number of Guests" class="form-input w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-sm text-white placeholder-white/30 transition-all">
+                        <button type="submit" class="btn-primary w-full py-3 text-sm">Reserve My Spot</button>
+                    </form>
+                    <p id="rsvp-success" class="hidden text-green-400 text-sm mt-4 text-center font-medium">Sláinte! We'll confirm your reservation shortly.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===================== REVIEWS ===================== -->
+<section class="py-20 px-4 relative" style="background:linear-gradient(180deg,#0a1628,rgba(30,58,95,.12),#0a1628);">
+    <div class="max-w-5xl mx-auto">
+        <div class="text-center mb-14" data-reveal>
+            <p class="text-gold tracking-[0.3em] uppercase text-xs font-semibold mb-3">What Our Guests Say</p>
+            <h2 class="font-playfair text-3xl md:text-5xl font-bold mb-3">1,700+ Reviews Can't Be Wrong</h2>
+            <p class="text-white/50 max-w-xl mx-auto text-sm mt-4">Rated 4.35 on Google and 4.2 on TripAdvisor. Here's what visitors love about Gielty's.</p>
+            <div class="section-gold-line mx-auto mt-5"></div>
+        </div>
+        <div data-reveal data-stagger class="grid md:grid-cols-3 gap-6">
+            <div class="glass-card p-7">
+                <div class="text-gold mb-3 tracking-wider">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p class="text-white/75 text-sm italic leading-relaxed mb-5">"Love this pub. Visited for New Year's and the atmosphere was electric! The pipers at midnight were incredible."</p>
+                <div class="flex items-center gap-3">
+                    <div class="w-9 h-9 rounded-full bg-gold/20 flex items-center justify-center text-gold font-bold text-sm">V</div>
+                    <div>
+                        <p class="text-white/90 text-sm font-medium">Valerie H.</p>
+                        <p class="text-white/40 text-xs">via Google</p>
+                    </div>
+                </div>
+            </div>
+            <div class="glass-card p-7">
+                <div class="text-gold mb-3 tracking-wider">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p class="text-white/75 text-sm italic leading-relaxed mb-5">"The cod and chips were excellent, the clams even better! Exactly what we needed after a hike. We'll definitely be back."</p>
+                <div class="flex items-center gap-3">
+                    <div class="w-9 h-9 rounded-full bg-gold/20 flex items-center justify-center text-gold font-bold text-sm">B</div>
+                    <div>
+                        <p class="text-white/90 text-sm font-medium">Bea</p>
+                        <p class="text-white/40 text-xs">via Google</p>
+                    </div>
+                </div>
+            </div>
+            <div class="glass-card p-7">
+                <div class="text-gold mb-3 tracking-wider">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p class="text-white/75 text-sm italic leading-relaxed mb-5">"Friendly bar with good food and a lovely pint of Guinness. Allows motorhome parking. It feels like coming home."</p>
+                <div class="flex items-center gap-3">
+                    <div class="w-9 h-9 rounded-full bg-gold/20 flex items-center justify-center text-gold font-bold text-sm">B</div>
+                    <div>
+                        <p class="text-white/90 text-sm font-medium">Bill C.</p>
+                        <p class="text-white/40 text-xs">via Google</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div data-reveal class="mt-10 flex flex-col sm:flex-row gap-6 justify-center text-sm">
+            <a href="https://www.google.ie/maps/?cid=8505515428550204447" target="_blank" rel="noopener" class="link-underline text-white/50 hover:text-gold transition-colors">Read Google Reviews</a>
+            <a href="https://www.tripadvisor.ie/Restaurant_Review-g1513851-d1829213-Reviews-Gielty_s_Clew_Bay_Bar_Restaurant-Dooagh_Achill_Island_County_Mayo_Western_Irelan.html" target="_blank" rel="noopener" class="link-underline text-white/50 hover:text-gold transition-colors">Read TripAdvisor Reviews</a>
+        </div>
+    </div>
+</section>
+
+<!-- ===================== GIFT VOUCHERS ===================== -->
+<section id="gift-vouchers" class="py-20 px-4 bg-warm-dark">
+    <div class="max-w-6xl mx-auto">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <div data-reveal="fade-left">
+                <p class="text-gold tracking-[0.3em] uppercase text-xs font-semibold mb-3">The Perfect Gift</p>
+                <h2 class="font-playfair text-3xl md:text-4xl font-bold mb-4">Give the Gift<br>of Gielty's</h2>
+                <div class="section-gold-line mt-2 mb-6"></div>
+                <p class="text-white/60 leading-relaxed mb-4">A night at the most westerly pub in Europe — dinner, drinks, live music, and memories that last forever. Gift vouchers available from &euro;25.</p>
+                <p class="text-white/60 leading-relaxed mb-6">Perfect for birthdays, anniversaries, or just because someone deserves a proper night on Achill Island.</p>
+                <ul class="space-y-2 text-sm text-white/50 mb-8">
+                    <li class="flex items-center gap-2"><span class="text-gold">&#10003;</span> Available in any amount from &euro;25</li>
+                    <li class="flex items-center gap-2"><span class="text-gold">&#10003;</span> Valid for food, drink &amp; coffee shop</li>
+                    <li class="flex items-center gap-2"><span class="text-gold">&#10003;</span> Beautifully presented gift card</li>
+                    <li class="flex items-center gap-2"><span class="text-gold">&#10003;</span> Posted or emailed same day</li>
+                </ul>
+            </div>
+            <div data-reveal="fade-right">
+                <div class="glass-card p-8">
+                    <!-- CSS Gift Voucher Illustration -->
+                    <div class="relative rounded-xl overflow-hidden mb-8" style="background:linear-gradient(135deg,#1e3a5f,#0f2440);padding:2rem;">
+                        <div class="absolute top-0 right-0 w-32 h-32 rounded-full" style="background:radial-gradient(circle,rgba(212,168,67,.2),transparent 70%);transform:translate(30%,-30%);"></div>
+                        <div class="absolute bottom-0 left-0 w-24 h-24 rounded-full" style="background:radial-gradient(circle,rgba(212,168,67,.15),transparent 70%);transform:translate(-30%,30%);"></div>
+                        <div class="relative text-center py-6">
+                            <p class="text-gold/60 text-xs uppercase tracking-[0.4em] mb-3">Gift Voucher</p>
+                            <p class="font-playfair text-3xl font-bold text-white mb-1">Gielty's</p>
+                            <p class="font-playfair text-sm italic text-white/50 mb-4">Clew Bay Bar &amp; Restaurant</p>
+                            <div class="w-12 h-[1px] bg-gold/40 mx-auto mb-4"></div>
+                            <p class="text-gold text-2xl font-bold">&euro;50</p>
+                            <p class="text-white/30 text-xs mt-2">Dooagh, Achill Island</p>
+                        </div>
+                    </div>
+                    <h3 class="font-playfair text-lg font-bold mb-4">Enquire About Vouchers</h3>
+                    <form id="voucher-form" class="space-y-4">
+                        <input type="text" name="name" required placeholder="Your Name" class="form-input w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-sm text-white placeholder-white/30 transition-all">
+                        <input type="email" name="email" required placeholder="Email Address" class="form-input w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-sm text-white placeholder-white/30 transition-all">
+                        <select name="amount" class="form-input w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-sm text-white/70 transition-all">
+                            <option value="25" class="bg-navy-deep">&euro;25 Voucher</option>
+                            <option value="50" class="bg-navy-deep" selected>&euro;50 Voucher</option>
+                            <option value="75" class="bg-navy-deep">&euro;75 Voucher</option>
+                            <option value="100" class="bg-navy-deep">&euro;100 Voucher</option>
+                            <option value="150" class="bg-navy-deep">&euro;150 Voucher</option>
+                            <option value="custom" class="bg-navy-deep">Custom Amount</option>
+                        </select>
+                        <textarea name="message" rows="2" placeholder="Personal message (optional)" class="form-input w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-sm text-white placeholder-white/30 transition-all resize-none"></textarea>
+                        <button type="submit" class="btn-primary w-full py-3 text-sm">Enquire Now</button>
+                    </form>
+                    <p id="voucher-success" class="hidden text-green-400 text-sm mt-4 text-center font-medium">Lovely! We'll be in touch shortly with your voucher details.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===================== OUR STORY / LOCATION ===================== -->
+<section id="our-story" class="py-20 px-4 relative" style="background:linear-gradient(180deg,#0a1628,rgba(30,58,95,.1),#0a1628);">
+    <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-14" data-reveal>
+            <p class="text-gold tracking-[0.3em] uppercase text-xs font-semibold mb-3">On the Wild Atlantic Way</p>
+            <h2 class="font-playfair text-3xl md:text-5xl font-bold mb-3">Where the Road Ends<br>and the Views Begin</h2>
+            <div class="section-gold-line mx-auto mt-5"></div>
+        </div>
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <div data-reveal="fade-left">
+                <p class="text-white/65 leading-relaxed mb-5 text-base">
+                    Perched at the edge of Dooagh village — the last stop before Keem Bay, one of Ireland's most beautiful beaches.
+                    Gaze out over Clew Bay, Clare Island, Inishturk and Inisbofin from our coffee shop windows.
+                </p>
+                <p class="text-white/65 leading-relaxed mb-6 text-base">
+                    Open 10am–10pm daily, all year round. Whether you're touring the Wild Atlantic Way, hiking Croaghaun's cliffs,
+                    or charging your EV in our car park — Gielty's is your stop.
+                </p>
+                <p class="text-white/65 leading-relaxed mb-8 text-base">
+                    Three generations of the Gielty family have welcomed visitors through these doors. The decor may change,
+                    but the warmth never will. Come as a stranger, leave as a friend. That's the Gielty's way.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#find-us" class="link-underline text-gold font-semibold text-sm">Get Directions &rarr;</a>
+                    <a href="/achill-guide" class="link-underline text-gold font-semibold text-sm">Explore Achill &rarr;</a>
+                    <a href="/coffee-shop" class="link-underline text-gold font-semibold text-sm">Coffee Shop &rarr;</a>
+                </div>
+            </div>
+            <div data-reveal="fade-right" class="space-y-6">
+                <div class="glass-card overflow-hidden">
+                    <div class="grid grid-cols-2 gap-px bg-white/5">
+                        <div class="p-5 text-center">
+                            <p class="text-gold font-playfair text-2xl font-bold">Est. 1927</p>
+                            <p class="text-white/40 text-xs mt-1">Third Generation</p>
+                        </div>
+                        <div class="p-5 text-center">
+                            <p class="text-gold font-playfair text-2xl font-bold">365 Days</p>
+                            <p class="text-white/40 text-xs mt-1">Open All Year</p>
+                        </div>
+                        <div class="p-5 text-center">
+                            <p class="text-gold font-playfair text-2xl font-bold">Own Boat</p>
+                            <p class="text-white/40 text-xs mt-1">Fresh Seafood Daily</p>
+                        </div>
+                        <div class="p-5 text-center">
+                            <p class="text-gold font-playfair text-2xl font-bold">EV Ready</p>
+                            <p class="text-white/40 text-xs mt-1">Fast Charger</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===================== FIND US / MAP ===================== -->
+<section id="find-us" class="py-20 px-4 bg-warm-dark">
+    <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-14" data-reveal>
+            <p class="text-gold tracking-[0.3em] uppercase text-xs font-semibold mb-3">Visit Us</p>
+            <h2 class="font-playfair text-3xl md:text-5xl font-bold mb-3">Find Gielty's</h2>
+            <div class="section-gold-line mx-auto mt-5"></div>
+        </div>
+        <div class="grid lg:grid-cols-2 gap-8">
+            <div data-reveal="fade-left" class="glass-card overflow-hidden">
+                <div class="aspect-video w-full">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2316.5!2d-10.136733!3d53.973304!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4859a7a4b378dc43%3A0x7609a9d6d656dc1f!2sGielty&#39;s%20Clew%20Bay%20Bar%20%26%20Restaurant!5e0!3m2!1sen!2sie!4f13.1" width="100%" height="100%" style="border:0;min-height:300px;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Gielty's location on Google Maps"></iframe>
+                </div>
+            </div>
+            <div data-reveal="fade-right">
+                <div class="glass-card p-8 h-full">
+                    <div class="grid sm:grid-cols-2 gap-6">
+                        <div>
+                            <p class="text-white/40 text-xs uppercase tracking-wider mb-2">Address</p>
+                            <p class="text-white text-sm leading-relaxed">Keelwest, Dooagh<br>Achill Island, Co. Mayo<br>F28 F6C1</p>
+                        </div>
+                        <div>
+                            <p class="text-white/40 text-xs uppercase tracking-wider mb-2">Phone</p>
+                            <a href="tel:+35398-43119" class="text-white hover:text-gold transition-colors text-sm block mb-4" onclick="gtag('event','click_to_call',{event_category:'contact'});">(098) 43119</a>
+                            <p class="text-white/40 text-xs uppercase tracking-wider mb-2">Email</p>
+                            <a href="mailto:info@gieltys.com" class="text-white hover:text-gold transition-colors text-sm">info@gieltys.com</a>
+                        </div>
+                        <div>
+                            <p class="text-white/40 text-xs uppercase tracking-wider mb-2">Hours</p>
+                            <p class="text-white text-sm">10am &ndash; 10pm Daily</p>
+                            <p class="text-white/50 text-xs mt-1">Open 365 days a year</p>
+                        </div>
+                        <div>
+                            <p class="text-white/40 text-xs uppercase tracking-wider mb-2">EV Charging</p>
+                            <p class="text-white text-sm">Fast charger in car park</p>
+                            <p class="text-white/50 text-xs mt-1">Free while you dine</p>
+                        </div>
+                    </div>
+                    <div class="mt-8 pt-6 border-t border-white/10">
+                        <p class="text-white/40 text-xs uppercase tracking-wider mb-3">Getting Here</p>
+                        <p class="text-white/60 text-sm leading-relaxed">Free shuttle bus service anywhere on Achill Island. Call us to arrange collection &mdash; we'll get you here and home safely.</p>
+                    </div>
+                    <div class="mt-6 flex flex-wrap gap-3">
+                        <a href="/book" class="btn-primary px-6 py-2.5 text-sm">Book a Table</a>
+                        <a href="https://wa.me/3539843119?text=Hi%20Gielty's%2C%20I'd%20like%20to%20make%20an%20enquiry" target="_blank" rel="noopener" class="btn-outline px-6 py-2.5 text-sm" onclick="gtag('event','whatsapp_click',{event_category:'contact',event_label:'find_us_section'});">WhatsApp Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===================== COMMUNITY BOARD ===================== -->
+<section id="community" class="py-20 px-4 relative" style="background:linear-gradient(180deg,#0a1628,rgba(30,58,95,.1),#0a1628);">
+    <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-14" data-reveal>
+            <p class="text-gold tracking-[0.3em] uppercase text-xs font-semibold mb-3">The Island Hub</p>
+            <h2 class="font-playfair text-3xl md:text-5xl font-bold mb-3">What's Happening on Achill</h2>
+            <p class="text-white/50 max-w-xl mx-auto text-sm mt-4">Gielty's is more than a pub — we're the heart of the community. Here's what's on around the island.</p>
+            <div class="section-gold-line mx-auto mt-5"></div>
+        </div>
+        <div data-reveal data-stagger class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            <a href="https://achillislandmarket.com" target="_blank" rel="noopener" class="glass-card p-6 group block">
+                <div class="text-2xl mb-3">&#127819;</div>
+                <h3 class="font-semibold text-sm mb-1 group-hover:text-gold transition-colors">Achill Island Market</h3>
+                <p class="text-white/40 text-xs">Fresh local produce, crafts &amp; artisan food every week.</p>
+            </a>
+            <div class="glass-card p-6">
+                <div class="text-2xl mb-3">&#127754;</div>
+                <h3 class="font-semibold text-sm mb-1">Keem Bay</h3>
+                <p class="text-white/40 text-xs">Ireland's most beautiful beach, 5 minutes from our door.</p>
+            </div>
+            <div class="glass-card p-6">
+                <div class="text-2xl mb-3">&#9968;&#65039;</div>
+                <h3 class="font-semibold text-sm mb-1">Croaghaun Cliffs</h3>
+                <p class="text-white/40 text-xs">Third highest sea cliffs in Europe. Guided walks available.</p>
+            </div>
+            <div class="glass-card p-6">
+                <div class="text-2xl mb-3">&#127946;</div>
+                <h3 class="font-semibold text-sm mb-1">Achill Outdoor</h3>
+                <p class="text-white/40 text-xs">Surfing, kayaking, SUP &amp; coasteering. All levels welcome.</p>
+            </div>
+            <div class="glass-card p-6">
+                <div class="text-2xl mb-3">&#128690;</div>
+                <h3 class="font-semibold text-sm mb-1">Greenway Cycle</h3>
+                <p class="text-white/40 text-xs">The Great Western Greenway — cycle from Westport to Achill.</p>
+            </div>
+            <div class="glass-card p-6">
+                <div class="text-2xl mb-3">&#127966;&#65039;</div>
+                <h3 class="font-semibold text-sm mb-1">Deserted Village</h3>
+                <p class="text-white/40 text-xs">Haunting ruins of a famine-era booley village at Slievemore.</p>
+            </div>
+            <div class="glass-card p-6">
+                <div class="text-2xl mb-3">&#128011;</div>
+                <h3 class="font-semibold text-sm mb-1">Wild Atlantic Drive</h3>
+                <p class="text-white/40 text-xs">Loop drive around Achill with stunning coastal views.</p>
+            </div>
+            <a href="/achill-guide" class="glass-card p-6 flex items-center justify-center group block">
+                <span class="text-gold font-semibold text-sm group-hover:text-white transition-colors">Explore Full Guide &rarr;</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ===================== VISITOR GALLERY ===================== -->
+<section class="py-20 px-4 bg-warm-dark">
+    <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-14" data-reveal>
+            <p class="text-gold tracking-[0.3em] uppercase text-xs font-semibold mb-3">#Gieltys</p>
+            <h2 class="font-playfair text-3xl md:text-5xl font-bold mb-3">Share Your Gielty's Moment</h2>
+            <p class="text-white/50 max-w-xl mx-auto text-sm mt-4">Tag us on Instagram and your photo could be featured here. We love seeing your Achill adventures.</p>
+            <div class="section-gold-line mx-auto mt-5"></div>
+        </div>
+        <div data-reveal data-stagger class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+            <div class="polaroid" style="--rot:-2deg;">
+                <img src="img/gieltys-bar-interior.jpg" alt="Gielty's bar interior" class="aspect-square w-full object-cover rounded-sm">
+                <p class="text-navy-deep text-xs text-center mt-2 font-medium">Inside Gielty's</p>
+            </div>
+            <div class="polaroid" style="--rot:1.5deg;">
+                <img src="img/gieltys-fireplace.jpg" alt="Gielty's turf fireplace" class="aspect-square w-full object-cover rounded-sm">
+                <p class="text-navy-deep text-xs text-center mt-2 font-medium">The turf fire</p>
+            </div>
+            <div class="polaroid" style="--rot:-1deg;">
+                <img src="img/gieltys-food.jpg" alt="Fresh food at Gielty's" class="aspect-square w-full object-cover rounded-sm">
+                <p class="text-navy-deep text-xs text-center mt-2 font-medium">Fresh from Achill</p>
+            </div>
+            <div class="polaroid" style="--rot:2deg;">
+                <img src="img/gieltys-menu-table.jpg" alt="Dining at Gielty's" class="aspect-square w-full object-cover rounded-sm">
+                <p class="text-navy-deep text-xs text-center mt-2 font-medium">Dining at Gielty's</p>
+            </div>
+            <div class="polaroid" style="--rot:1deg;">
+                <img src="img/gieltys-exterior.jpg" alt="Gielty's exterior — open all year" class="aspect-square w-full object-cover rounded-sm">
+                <p class="text-navy-deep text-xs text-center mt-2 font-medium">Open all year</p>
+            </div>
+            <div class="polaroid" style="--rot:-1.5deg;">
+                <img src="img/gieltys-president-visit.jpg" alt="President Michael D. Higgins at Gielty's" class="aspect-square w-full object-cover rounded-sm">
+                <p class="text-navy-deep text-xs text-center mt-2 font-medium">Presidential visit</p>
+            </div>
+            <div class="polaroid" style="--rot:0.5deg;">
+                <div class="aspect-square rounded-sm flex items-center justify-center" style="background:linear-gradient(135deg,#0f2440,#2a4f7a);">
+                    <span class="text-4xl">&#127925;</span>
+                </div>
+                <p class="text-navy-deep text-xs text-center mt-2 font-medium">Saturday night trad</p>
+            </div>
+            <div class="polaroid flex items-center justify-center" style="--rot:-0.5deg;min-height:200px;">
+                <div class="text-center p-4">
+                    <p class="text-navy-deep text-sm font-bold mb-2">Your photo here!</p>
+                    <p class="text-navy/60 text-xs">Tag <span class="font-semibold">@gieltysbar</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===================== THE CRAIC CORNER ===================== -->
+<section id="craic-corner" class="py-20 px-4 relative" style="background:linear-gradient(180deg,#0a1628,rgba(30,58,95,.12),#0a1628);">
+    <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-12" data-reveal>
+            <p class="text-gold tracking-[0.3em] uppercase text-xs font-semibold mb-3">A Bit of Fun</p>
+            <h2 class="font-playfair text-3xl md:text-5xl font-bold mb-3">The Craic Corner</h2>
+            <div class="section-gold-line mx-auto mt-5"></div>
+        </div>
+        <div data-reveal data-stagger class="grid md:grid-cols-3 gap-6">
+            <div class="glass-card p-7 text-center">
+                <div class="text-3xl mb-4">&#9752;&#65039;</div>
+                <h3 class="font-semibold text-sm text-gold mb-3 uppercase tracking-wider">Irish Fun Fact</h3>
+                <p class="text-white/70 text-sm italic leading-relaxed" id="irish-fact">"Ireland has won the Eurovision Song Contest seven times — more than any other country."</p>
+            </div>
+            <div class="glass-card p-7 text-center">
+                <div class="text-3xl mb-4">&#129300;</div>
+                <h3 class="font-semibold text-sm text-gold mb-3 uppercase tracking-wider">Question of the Day</h3>
+                <p class="text-white/70 text-sm italic leading-relaxed" id="daily-question">"What's the one thing you'd bring to a desert island?"</p>
+                <p class="text-white/30 text-xs mt-3">Ask your bartender for the best answer from yesterday!</p>
+            </div>
+            <div class="glass-card p-7 text-center">
+                <div class="text-3xl mb-4">&#127942;</div>
+                <h3 class="font-semibold text-sm text-gold mb-3 uppercase tracking-wider">Trivia Night</h3>
+                <p class="text-white/70 text-sm leading-relaxed mb-4">Thursday nights, 8:30pm. Teams of 2&ndash;6. Prizes for the top 3!</p>
+                <form id="trivia-form" class="space-y-3">
+                    <input type="text" name="team_name" required placeholder="Team Name" class="form-input w-full bg-white/5 border border-white/10 rounded-lg px-3 py-2 text-xs text-white placeholder-white/30 transition-all">
+                    <input type="email" name="email" required placeholder="Contact Email" class="form-input w-full bg-white/5 border border-white/10 rounded-lg px-3 py-2 text-xs text-white placeholder-white/30 transition-all">
+                    <button type="submit" class="btn-primary w-full py-2 text-xs">Sign Up for Trivia</button>
+                </form>
+                <p id="trivia-success" class="hidden text-green-400 text-xs mt-2 font-medium">You're in! See you Thursday.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===================== CTA BANNER ===================== -->
+<section class="py-20 px-4 relative overflow-hidden" style="background:linear-gradient(135deg,#1e3a5f,#0f2440);">
+    <div class="absolute inset-0" style="background:radial-gradient(ellipse 50% 80% at 50% 50%,rgba(212,168,67,.06),transparent);"></div>
+    <div class="max-w-4xl mx-auto text-center relative z-10" data-reveal>
+        <h2 class="font-playfair text-3xl md:text-5xl font-bold mb-5">There Are No Strangers<br>in Gielty's</h2>
+        <p class="text-white/60 text-lg md:text-xl mb-10 font-playfair italic">Only friends who have never met before.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/book" class="btn-primary px-10 py-4 text-lg">Book Your Table</a>
+            <a href="tel:+353-98-43119" class="btn-outline px-10 py-4 text-lg" onclick="gtag('event','click_to_call',{event_category:'cta_banner'});">Call Us: 098 43119</a>
+        </div>
+    </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="py-20 px-4 bg-warm-dark border-t border-white/5">
+    <div class="max-w-6xl mx-auto">
+        <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-10 mb-16">
+            <div class="lg:col-span-2">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="font-playfair text-2xl font-bold">GIELTY'S</span>
+                    <span class="text-gold font-bold text-[10px] tracking-[0.25em] opacity-70">CLEW BAY</span>
+                </div>
+                <p class="text-white/40 text-sm leading-relaxed mb-4">The most westerly pub in Europe. Third-generation family bar, restaurant &amp; coffee shop.<br>Dooagh, Achill Island, Co. Mayo, F28 F6C1</p>
+                <div class="flex gap-4">
+                    <a href="https://www.facebook.com/GieltysBarAchill/" target="_blank" rel="noopener" class="w-10 h-10 rounded-full bg-white/5 hover:bg-gold/20 flex items-center justify-center text-white/50 hover:text-gold transition-all" aria-label="Facebook">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.77,7.46H14.5v-1.9c0-.9.6-1.1,1-1.1h3V.5h-4.33C10.24.5,9.5,3.44,9.5,5.32v2.15h-3v4h3v12h5v-12h3.85l.42-4Z"/></svg>
+                    </a>
+                    <a href="https://www.tripadvisor.ie/Restaurant_Review-g1513851-d1829213-Reviews-Gielty_s_Clew_Bay_Bar_Restaurant-Dooagh_Achill_Island_County_Mayo_Western_Irelan.html" target="_blank" rel="noopener" class="w-10 h-10 rounded-full bg-white/5 hover:bg-gold/20 flex items-center justify-center text-white/50 hover:text-gold transition-all" aria-label="TripAdvisor">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/></svg>
+                    </a>
+                    <a href="https://www.google.ie/maps/?cid=8505515428550204447" target="_blank" rel="noopener" class="w-10 h-10 rounded-full bg-white/5 hover:bg-gold/20 flex items-center justify-center text-white/50 hover:text-gold transition-all" aria-label="Google">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+                    </a>
+                </div>
+            </div>
+            <div>
+                <h3 class="text-xs font-semibold uppercase tracking-[0.2em] text-gold/80 mb-5">Explore</h3>
+                <div class="space-y-3 text-sm">
+                    <a href="/menu" class="block text-white/40 hover:text-gold transition-colors">Menu</a>
+                    <a href="/music-and-events" class="block text-white/40 hover:text-gold transition-colors">Music &amp; Events</a>
+                    <a href="https://exposuresolutions.ie/games-hub.html?venue=gieltys" target="_blank" rel="noopener" class="block text-white/40 hover:text-gold transition-colors">Game Zone</a>
+                    <a href="/coffee-shop" class="block text-white/40 hover:text-gold transition-colors">Coffee Shop</a>
+                    <a href="/gallery" class="block text-white/40 hover:text-gold transition-colors">Gallery</a>
+                    <a href="/about" class="block text-white/40 hover:text-gold transition-colors">Our Story</a>
+                </div>
+            </div>
+            <div>
+                <h3 class="text-xs font-semibold uppercase tracking-[0.2em] text-gold/80 mb-5">Visit</h3>
+                <div class="space-y-3 text-sm">
+                    <a href="/contact" class="block text-white/40 hover:text-gold transition-colors">Find Us</a>
+                    <a href="/book" class="block text-white/40 hover:text-gold transition-colors">Book a Table</a>
+                    <a href="/jobs" class="block text-white/40 hover:text-gold transition-colors">Jobs</a>
+                    <a href="/achill-guide" class="block text-white/40 hover:text-gold transition-colors">Explore Achill</a>
+                    <a href="#gift-vouchers" class="block text-white/40 hover:text-gold transition-colors">Gift Vouchers</a>
+                    <a href="/invest" class="block text-white/40 hover:text-gold transition-colors">Investment</a>
+                </div>
+            </div>
+            <div>
+                <h3 class="text-xs font-semibold uppercase tracking-[0.2em] text-gold/80 mb-5">Partner Network</h3>
+                <div class="space-y-3 text-sm">
+                    <a href="https://tedsbar.ie" target="_blank" rel="noopener" class="block text-white/40 hover:text-gold transition-colors">Ted's Bar</a>
+                    <a href="https://achillislandmarket.com" target="_blank" rel="noopener" class="block text-white/40 hover:text-gold transition-colors">Achill Island Market</a>
+                    <a href="https://fantasyminigolf.ie" target="_blank" rel="noopener" class="block text-white/40 hover:text-gold transition-colors">Fantasy Mini Golf</a>
+                    <a href="https://achilloffshore.com" target="_blank" rel="noopener" class="block text-white/40 hover:text-gold transition-colors">Achill Offshore</a>
+                    <a href="https://achillcoaches.com" target="_blank" rel="noopener" class="block text-white/40 hover:text-gold transition-colors">Achill Coaches</a>
+                </div>
+                <div class="mt-6 p-4 rounded-xl bg-white/[0.03] border border-white/5">
+                    <p class="text-white/50 text-xs font-semibold mb-1">Twin Bar</p>
+                    <p class="text-white/70 text-sm">Flavors Daiquiri Bar</p>
+                    <p class="text-white/30 text-xs">Laganas, Zante, Greece</p>
+                    <a href="https://achilloffshore.com/exchange" class="text-gold text-xs font-semibold hover:text-white transition-colors mt-2 inline-block">Work at Both &rarr;</a>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="text-white/20 text-xs">&copy; 2026 Gielty's Bar &amp; Restaurant. All rights reserved.</p>
+            <div class="flex flex-wrap gap-4 text-xs text-white/20 justify-center">
+                <a href="/privacy" class="hover:text-gold transition-colors">Privacy Policy</a>
+                <span class="hidden md:inline">&bull;</span>
+                <a href="/invest" class="hover:text-gold transition-colors">Investment Opportunity</a>
+                <span class="hidden md:inline">&bull;</span>
+                <span>Keelwest, Dooagh, Achill Island, F28 F6C1</span>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/3539843119?text=Hi%20Gielty's%2C%20I'd%20like%20to%20make%20an%20enquiry" target="_blank" rel="noopener"
+   class="fixed bottom-6 right-6 z-50 bg-[#25D366] hover:bg-[#128C7E] text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg transition-all hover:scale-110 hover:shadow-xl"
+   onclick="gtag('event','whatsapp_click',{event_category:'contact',event_label:'floating_button'});"
+   aria-label="Chat on WhatsApp">
+    <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<!-- ===================== JAVASCRIPT ===================== -->
+<script>
+(function(){
+    'use strict';
+
+    /* --- Scroll Progress Bar --- */
+    var progressBar = document.getElementById('scroll-progress');
+    function updateProgress() {
+        var scrollTop = window.scrollY;
+        var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        progressBar.style.width = (docHeight > 0 ? (scrollTop / docHeight * 100) : 0) + '%';
+    }
+
+    /* --- Nav Scroll Effect --- */
+    var nav = document.getElementById('main-nav');
+    var lastScroll = 0;
+    function updateNav() {
+        var scrollTop = window.scrollY;
+        if (scrollTop > 80) {
+            nav.classList.remove('nav-transparent');
+            nav.classList.add('nav-solid');
+        } else {
+            nav.classList.add('nav-transparent');
+            nav.classList.remove('nav-solid');
+        }
+        lastScroll = scrollTop;
+    }
+
+    window.addEventListener('scroll', function() {
+        requestAnimationFrame(function() {
+            updateProgress();
+            updateNav();
+        });
+    }, { passive: true });
+
+    /* --- Mobile Menu --- */
+    var mobileBtn = document.getElementById('mobileMenuBtn');
+    var mobileMenu = document.getElementById('mobileMenu');
+    mobileBtn.addEventListener('click', function() {
+        mobileMenu.classList.toggle('hidden');
+    });
+    document.querySelectorAll('.mobile-nav').forEach(function(link) {
+        link.addEventListener('click', function() { mobileMenu.classList.add('hidden'); });
+    });
+
+    /* --- Smooth Scroll --- */
+    document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+        anchor.addEventListener('click', function(e) {
+            var target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                e.preventDefault();
+                var offset = nav.offsetHeight + 16;
+                var top = target.getBoundingClientRect().top + window.scrollY - offset;
+                window.scrollTo({ top: top, behavior: 'smooth' });
+            }
+        });
+    });
+
+    /* --- Scroll Reveal (IntersectionObserver) --- */
+    var revealElements = document.querySelectorAll('[data-reveal], [data-stagger]');
+    if ('IntersectionObserver' in window) {
+        var revealObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+        revealElements.forEach(function(el) { revealObserver.observe(el); });
+    } else {
+        revealElements.forEach(function(el) { el.classList.add('revealed'); });
+    }
+
+    /* --- Typed Text Effect --- */
+    var typedEl = document.getElementById('typed-text');
+    var phrases = ['Live Music', 'Local Food', 'Wild Atlantic Views', 'Traditional Irish Welcome', 'Free Shuttle Bus', 'Craft Beer & Cocktails'];
+    var phraseIdx = 0, charIdx = 0, isDeleting = false, typingSpeed = 80;
+    function typeLoop() {
+        var current = phrases[phraseIdx];
+        if (isDeleting) {
+            typedEl.textContent = current.substring(0, charIdx - 1);
+            charIdx--;
+            typingSpeed = 40;
+        } else {
+            typedEl.textContent = current.substring(0, charIdx + 1);
+            charIdx++;
+            typingSpeed = 80;
+        }
+        if (!isDeleting && charIdx === current.length) {
+            typingSpeed = 2200;
+            isDeleting = true;
+        } else if (isDeleting && charIdx === 0) {
+            isDeleting = false;
+            phraseIdx = (phraseIdx + 1) % phrases.length;
+            typingSpeed = 400;
+        }
+        setTimeout(typeLoop, typingSpeed);
+    }
+    typeLoop();
+
+    /* --- Counter Animation --- */
+    var counters = document.querySelectorAll('.counter-num');
+    if ('IntersectionObserver' in window) {
+        var counterObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    animateCounter(entry.target);
+                    counterObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+        counters.forEach(function(c) { counterObserver.observe(c); });
+    }
+    function animateCounter(el) {
+        var target = parseInt(el.getAttribute('data-count'), 10);
+        var suffix = el.getAttribute('data-suffix') || '';
+        var duration = 2000;
+        var start = performance.now();
+        function step(now) {
+            var elapsed = now - start;
+            var progress = Math.min(elapsed / duration, 1);
+            var eased = 1 - Math.pow(1 - progress, 3);
+            var current = Math.round(eased * target);
+            el.textContent = current.toLocaleString() + suffix;
+            if (progress < 1) requestAnimationFrame(step);
+        }
+        requestAnimationFrame(step);
+    }
+
+    /* --- Tonight at Gielty's (day-based rotation) --- */
+    var daySchedule = {
+        0: { music: 'Sunday Trad Session', time: '4pm – 8pm', desc: 'Afternoon session with the regulars. Roast dinner on the menu.', food: 'Sunday Roast & All the Trimmings — €18', drink: 'Hot Whiskey — €7' },
+        1: { music: 'Open Mic Monday', time: '8pm – Late', desc: 'Got a song in you? Grab the mic and give it a lash.', food: 'Fish & Chips — €15', drink: 'Pint of Smithwick\'s — €5.50' },
+        2: { music: 'Trad Session Tuesday', time: '9pm – Late', desc: 'Local musicians gather for authentic Irish trad. Bring your instrument!', food: 'Atlantic Seafood Chowder & Brown Bread — €14.50', drink: 'Craft Beer Flight — €12' },
+        3: { music: 'Acoustic Wednesday', time: '8:30pm – Late', desc: 'Singer-songwriters in an intimate setting. Pure magic.', food: 'Gielty\'s Platter for Two — €48', drink: 'Glass of House Wine — €7' },
+        4: { music: 'Trivia Thursday', time: '8:30pm – 10:30pm', desc: 'Test your knowledge! Teams of 2–6. Prizes for the top 3.', food: 'Achill Island Lamb — €24', drink: 'Irish Coffee — €8' },
+        5: { music: 'Friday Night Live', time: '9:30pm – Late', desc: 'Full band tonight. Dancing, craic, and the best night on Achill.', food: 'Gielty\'s Surf & Turf — €26', drink: 'Espresso Martini — €12' },
+        6: { music: 'Saturday Night Special', time: '9:30pm – Late', desc: 'The big one. Live band, packed house, unforgettable Achill energy.', food: 'Catch of the Day — Market Price', drink: 'Cocktail of the Week — €11' }
+    };
+    var today = new Date().getDay();
+    var sched = daySchedule[today];
+    if (sched) {
+        var mt = document.getElementById('tonight-music-title');
+        var mtime = document.getElementById('tonight-music-time');
+        var mdesc = document.getElementById('tonight-music-desc');
+        var fd = document.getElementById('tonight-food');
+        var dk = document.getElementById('tonight-drink');
+        if (mt) mt.textContent = sched.music;
+        if (mtime) mtime.textContent = sched.time;
+        if (mdesc) mdesc.textContent = sched.desc;
+        if (fd) fd.textContent = sched.food;
+        if (dk) dk.textContent = sched.drink;
+    }
+
+    /* --- Craic Corner Rotation --- */
+    var irishFacts = [
+        '"Ireland has won the Eurovision Song Contest seven times — more than any other country."',
+        '"The Irish language has no words for \'yes\' or \'no.\' Answers repeat the verb of the question."',
+        '"Achill Island is connected to the mainland by the Michael Davitt Bridge, built in 1887."',
+        '"The Guinness Book of World Records was created in 1955 to settle arguments in Irish pubs."',
+        '"Halloween originated from the ancient Irish festival of Samhain over 2,000 years ago."',
+        '"Achill Island is the largest island off the coast of Ireland at 148 km²."',
+        '"The oldest pub in Ireland — and possibly the world — is Sean\'s Bar in Athlone, dating to 900 AD."'
+    ];
+    var dailyQuestions = [
+        '"What\'s the one thing you\'d bring to a desert island?"',
+        '"If you could have a pint with anyone in history, who would it be?"',
+        '"What\'s the best meal you\'ve ever had on holiday?"',
+        '"If Achill had a theme song, what would it be?"',
+        '"What\'s your most unpopular food opinion?"',
+        '"Would you rather live by the sea or in the mountains?"',
+        '"What\'s the furthest west you\'ve ever been? (You\'re pretty far west right now!)"'
+    ];
+    var factEl = document.getElementById('irish-fact');
+    var questionEl = document.getElementById('daily-question');
+    if (factEl) factEl.textContent = irishFacts[today % irishFacts.length];
+    if (questionEl) questionEl.textContent = dailyQuestions[today % dailyQuestions.length];
+
+    /* --- Form Submissions --- */
+    var API = 'https://dodealswithlee.onrender.com/api/client-form';
+
+    function handleForm(formId, successId, formType, extraData) {
+        var form = document.getElementById(formId);
+        if (!form) return;
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            var fd = new FormData(form);
+            var data = { client: 'gieltys', form_type: formType };
+            fd.forEach(function(val, key) { data[key] = val; });
+            if (extraData) Object.assign(data, extraData);
+
+            fetch(API, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(data)
+            }).then(function() {
+                form.style.display = 'none';
+                document.getElementById(successId).classList.remove('hidden');
+                gtag('event', 'form_submit', { event_category: formType, event_label: formId });
+            }).catch(function() {
+                alert('Something went wrong. Please try again or call us on 098 43119.');
+            });
+        });
+    }
+
+    handleForm('rsvp-form', 'rsvp-success', 'event-rsvp');
+    handleForm('voucher-form', 'voucher-success', 'gift-voucher');
+    handleForm('trivia-form', 'trivia-success', 'trivia-signup');
+
+    /* --- Active Nav Section Highlighting --- */
+    var navLinks = document.querySelectorAll('.nav-link');
+    var sections = [];
+    navLinks.forEach(function(link) {
+        var href = link.getAttribute('href');
+        if (href && href.startsWith('#')) {
+            var sec = document.querySelector(href);
+            if (sec) sections.push({ el: sec, link: link });
+        }
+    });
+    if (sections.length && 'IntersectionObserver' in window) {
+        var navObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                var match = sections.find(function(s) { return s.el === entry.target; });
+                if (match) {
+                    if (entry.isIntersecting) {
+                        navLinks.forEach(function(l) { l.classList.remove('text-gold'); l.classList.add('text-white/80'); });
+                        match.link.classList.add('text-gold');
+                        match.link.classList.remove('text-white/80');
+                    }
+                }
+            });
+        }, { threshold: 0.3 });
+        sections.forEach(function(s) { navObserver.observe(s.el); });
+    }
+
+})();
+</script>
+
+<!-- ES AI Chatbot -->
+<script src="/assets/es-chatbot-widget.js" data-client="gieltys"></script>
+
+<!-- Cloudflare Web Analytics -->
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "gieltys-bar"}'></script>
+
+<!-- Accessibility Helper -->
+<div id="es-access" style="position:fixed;bottom:20px;left:20px;z-index:99990;display:flex;flex-direction:column;gap:8px;">
+    <button onclick="document.body.style.fontSize=(parseFloat(getComputedStyle(document.body).fontSize)+2)+'px'" style="width:44px;height:44px;border-radius:50%;border:2px solid #1e3a5f;background:#fff;font-size:20px;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.15)" aria-label="Increase text size" title="Bigger text">A+</button>
+    <button onclick="document.body.style.fontSize=(parseFloat(getComputedStyle(document.body).fontSize)-2)+'px'" style="width:44px;height:44px;border-radius:50%;border:2px solid #1e3a5f;background:#fff;font-size:20px;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.15)" aria-label="Decrease text size" title="Smaller text">A-</button>
+</div>
+</body>
+</html>

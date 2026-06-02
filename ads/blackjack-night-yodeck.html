@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1920,height=1080">
+<title>Gielty's Blackjack Saturday Night</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;600;700&display=swap');
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  width: 1920px;
+  height: 1080px;
+  overflow: hidden;
+  font-family: 'Inter', sans-serif;
+  background: #0a0a0a;
+  position: relative;
+}
+
+.felt-texture {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 120% 80% at 50% 40%, rgba(0,80,40,0.15) 0%, transparent 70%),
+    repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,60,30,0.03) 2px, rgba(0,60,30,0.03) 4px),
+    repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(0,60,30,0.03) 2px, rgba(0,60,30,0.03) 4px);
+}
+
+.vignette {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 70% 60% at 50% 45%, transparent 30%, rgba(0,0,0,0.7) 100%);
+}
+
+.scanlines {
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(0deg, transparent, transparent 1px, rgba(0,0,0,0.05) 1px, rgba(0,0,0,0.05) 2px);
+  pointer-events: none;
+  z-index: 100;
+}
+
+.content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+/* Playing Cards */
+.cards-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 400px;
+  z-index: 5;
+}
+
+.card {
+  position: absolute;
+  width: 200px;
+  height: 300px;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.6), 0 0 40px rgba(218,165,32,0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Bebas Neue', sans-serif;
+  border: 3px solid #e8e0d0;
+  opacity: 0;
+}
+
+.card-ace {
+  top: 50px;
+  left: 60px;
+  transform: translateX(-400px) rotate(-20deg);
+  animation: slideInLeft 0.8s ease-out 1s forwards;
+}
+
+.card-king {
+  top: 50px;
+  right: 60px;
+  transform: translateX(400px) rotate(20deg);
+  animation: slideInRight 0.8s ease-out 1.3s forwards;
+}
+
+.card .suit { color: #c41e3a; font-size: 80px; line-height: 1; }
+.card .rank { font-size: 64px; color: #1a1a1a; margin-top: 4px; }
+.card .corner { position: absolute; font-size: 28px; color: #c41e3a; line-height: 1; }
+.card .corner-tl { top: 12px; left: 14px; }
+.card .corner-br { bottom: 12px; right: 14px; transform: rotate(180deg); }
+.card .corner .corner-rank { display: block; color: #1a1a1a; font-size: 24px; }
+
+@keyframes slideInLeft {
+  0% { transform: translateX(-500px) rotate(-30deg); opacity: 0; }
+  100% { transform: translateX(0) rotate(-8deg); opacity: 1; }
+}
+
+@keyframes slideInRight {
+  0% { transform: translateX(500px) rotate(30deg); opacity: 0; }
+  100% { transform: translateX(0) rotate(8deg); opacity: 1; }
+}
+
+/* Headline */
+.headline {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 160px;
+  color: transparent;
+  background: linear-gradient(180deg, #ffd700 0%, #daa520 40%, #b8860b 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  letter-spacing: 12px;
+  text-align: center;
+  line-height: 1;
+  filter: drop-shadow(0 4px 20px rgba(218,165,32,0.4));
+  opacity: 0;
+  transform: scale(0.8);
+  animation: headlineIn 0.8s ease-out 2s forwards;
+  position: relative;
+  z-index: 20;
+}
+
+@keyframes headlineIn {
+  0% { opacity: 0; transform: scale(0.8); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+.twenty-one {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 220px;
+  color: transparent;
+  background: linear-gradient(180deg, #ffd700 0%, #f0c040 50%, #daa520 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-shadow: none;
+  filter: drop-shadow(0 0 40px rgba(255,215,0,0.3));
+  opacity: 0;
+  animation: twentyOneIn 1s ease-out 1.8s forwards;
+  line-height: 0.85;
+  letter-spacing: 20px;
+  position: relative;
+  z-index: 20;
+}
+
+@keyframes twentyOneIn {
+  0% { opacity: 0; transform: translateY(30px); }
+  60% { opacity: 1; transform: translateY(-5px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.subtext {
+  font-family: 'Inter', sans-serif;
+  font-size: 48px;
+  color: #ffffff;
+  font-weight: 300;
+  letter-spacing: 8px;
+  margin-top: 20px;
+  opacity: 0;
+  animation: fadeUp 0.6s ease-out 2.6s forwards;
+  position: relative;
+  z-index: 20;
+}
+
+.tagline {
+  font-family: 'Inter', sans-serif;
+  font-size: 32px;
+  color: rgba(255,215,0,0.7);
+  font-weight: 400;
+  margin-top: 16px;
+  opacity: 0;
+  animation: fadeUp 0.6s ease-out 3s forwards;
+  letter-spacing: 3px;
+  position: relative;
+  z-index: 20;
+}
+
+@keyframes fadeUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Gold Particles */
+.particles {
+  position: absolute;
+  inset: 0;
+  z-index: 15;
+  pointer-events: none;
+}
+
+.particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: #ffd700;
+  border-radius: 50%;
+  opacity: 0;
+}
+
+/* Bottom Bar */
+.bottom-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 90px;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.9) 30%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  z-index: 50;
+  padding-top: 10px;
+  opacity: 0;
+  animation: fadeUp 0.6s ease-out 3.4s forwards;
+}
+
+.bottom-bar .brand {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 36px;
+  color: #ffd700;
+  letter-spacing: 6px;
+}
+
+.bottom-bar .divider {
+  width: 2px;
+  height: 30px;
+  background: rgba(255,215,0,0.3);
+}
+
+.bottom-bar .info {
+  font-family: 'Inter', sans-serif;
+  font-size: 22px;
+  color: rgba(255,255,255,0.7);
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+/* Glow pulse on headline */
+.headline-wrap {
+  position: relative;
+  z-index: 20;
+  animation: glowPulse 3s ease-in-out 3.5s infinite;
+}
+
+@keyframes glowPulse {
+  0%, 100% { filter: drop-shadow(0 0 20px rgba(255,215,0,0.2)); }
+  50% { filter: drop-shadow(0 0 40px rgba(255,215,0,0.5)); }
+}
+
+/* Loop reset */
+.loop-container {
+  animation: loopReset 10s linear infinite;
+}
+
+@keyframes loopReset {
+  0% { opacity: 1; }
+  85% { opacity: 1; }
+  95% { opacity: 0; }
+  100% { opacity: 0; }
+}
+</style>
+</head>
+<body>
+<div class="felt-texture"></div>
+<div class="vignette"></div>
+<div class="scanlines"></div>
+
+<div class="loop-container">
+  <div class="cards-container">
+    <div class="card card-ace">
+      <div class="corner corner-tl"><span class="corner-rank">A</span>♠</div>
+      <div class="suit">♠</div>
+      <div class="rank">A</div>
+      <div class="corner corner-br"><span class="corner-rank">A</span>♠</div>
+    </div>
+    <div class="card card-king">
+      <div class="corner corner-tl"><span class="corner-rank">K</span>♥</div>
+      <div class="suit" style="color:#c41e3a">♥</div>
+      <div class="rank">K</div>
+      <div class="corner corner-br"><span class="corner-rank">K</span>♥</div>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="twenty-one">21</div>
+    <div class="headline-wrap">
+      <div class="headline">BLACKJACK NIGHT</div>
+    </div>
+    <div class="subtext">EVERY SATURDAY — 9PM</div>
+    <div class="tagline">Free Entry · Prizes · Fun, Not Gambling</div>
+  </div>
+
+  <div class="particles" id="particles"></div>
+
+  <div class="bottom-bar">
+    <div class="brand">GIELTY'S</div>
+    <div class="divider"></div>
+    <div class="info">Keel, Achill Island</div>
+    <div class="divider"></div>
+    <div class="info">gieltysbar.com</div>
+  </div>
+</div>
+
+<script>
+(function() {
+  const container = document.getElementById('particles');
+  const PARTICLE_COUNT = 40;
+
+  function createParticles() {
+    container.innerHTML = '';
+    for (let i = 0; i < PARTICLE_COUNT; i++) {
+      const p = document.createElement('div');
+      p.className = 'particle';
+      const x = 30 + Math.random() * 40;
+      const y = 20 + Math.random() * 40;
+      const delay = 2 + Math.random() * 2;
+      const dur = 1.5 + Math.random() * 2;
+      const size = 2 + Math.random() * 4;
+      const drift = -50 + Math.random() * 100;
+      p.style.cssText = `
+        left: ${x}%;
+        top: ${y}%;
+        width: ${size}px;
+        height: ${size}px;
+        animation: particleFloat ${dur}s ease-out ${delay}s forwards;
+        --drift: ${drift}px;
+      `;
+      container.appendChild(p);
+    }
+  }
+
+  const style = document.createElement('style');
+  style.textContent = `
+    @keyframes particleFloat {
+      0% { opacity: 0; transform: translate(0, 0) scale(1); }
+      20% { opacity: 1; }
+      100% { opacity: 0; transform: translate(var(--drift), -200px) scale(0); }
+    }
+  `;
+  document.head.appendChild(style);
+
+  createParticles();
+  setInterval(createParticles, 10000);
+})();
+</script>
+</body>
+</html>

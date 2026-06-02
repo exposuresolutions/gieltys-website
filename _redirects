@@ -1,0 +1,40 @@
+# Clean URLs — Cloudflare Pages handles .html extension stripping natively
+# These catch any legacy/SEO links
+
+/home /  301
+/index /  301
+/index.html /  301
+/food /menu  301
+/drinks /menu  301
+/booking /book  301
+/reservations /book  301
+/reserve /book  301
+/events /music-and-events  301
+/music /music-and-events  301
+/live-music /music-and-events  301
+/functions /music-and-events  301
+/story /about  301
+/our-story /about  301
+/history /about  301
+/cafe /coffee-shop  301
+/coffee /coffee-shop  301
+/achill /achill-guide  301
+/explore /achill-guide  301
+/wild-atlantic-way /achill-guide  301
+/photos /gallery  301
+/images /gallery  301
+/directions /contact  301
+/find-us /contact  301
+/location /contact  301
+/investment /invest  301
+/invest-in-gieltys /invest  301
+/property /invest  301
+/for-sale /invest  301
+/buy /invest  301
+/careers /jobs  301
+/work /jobs  301
+/employment /jobs  301
+/vacancies /jobs  301
+/apply /jobs  301
+/privacy-policy /privacy  301
+/gdpr /privacy  301

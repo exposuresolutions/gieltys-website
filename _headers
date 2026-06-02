@@ -1,0 +1,31 @@
+/*
+  X-Frame-Options: SAMEORIGIN
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(self)
+  X-XSS-Protection: 1; mode=block
+
+/*.html
+  Cache-Control: public, max-age=300, stale-while-revalidate=86400
+
+/data/*
+  Cache-Control: public, max-age=60
+  Access-Control-Allow-Origin: *
+
+/*.jpg
+  Cache-Control: public, max-age=2592000, immutable
+
+/*.png
+  Cache-Control: public, max-age=2592000, immutable
+
+/*.webp
+  Cache-Control: public, max-age=2592000, immutable
+
+/*.svg
+  Cache-Control: public, max-age=2592000, immutable
+
+/*.css
+  Cache-Control: public, max-age=604800
+
+/*.js
+  Cache-Control: public, max-age=604800

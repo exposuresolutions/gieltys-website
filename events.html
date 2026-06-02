@@ -1,0 +1,766 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events & Games Night | What's On at Gielty's | Achill Island</title>
+    <meta name="description" content="Blackjack nights, pub quizzes, World Cup 2026 screenings, live trad sessions and more at Gielty's â€” the most westerly pub in Europe. Dooagh, Achill Island.">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Gielty's Bar & Restaurant">
+    <meta name="geo.region" content="IE-MO">
+    <meta name="geo.placename" content="Dooagh, Achill Island, County Mayo">
+    <meta name="geo.position" content="53.973304;-10.136733">
+    <meta name="ICBM" content="53.973304, -10.136733">
+    <link rel="canonical" href="https://www.gieltys.com/events">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="What's On at Gielty's | Events & Games Night | Achill Island">
+    <meta property="og:description" content="Blackjack nights, pub quizzes, World Cup screenings, live trad sessions. Find out what's happening at Gielty's this week.">
+    <meta property="og:url" content="https://www.gieltys.com/events">
+    <meta property="og:site_name" content="Gielty's Bar & Restaurant">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="What's On at Gielty's | Events & Games Night">
+    <meta name="twitter:description" content="Blackjack, quizzes, World Cup, live trad â€” see what's on at the most westerly pub in Europe.">
+    <!-- GA4 placeholder -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer=window.dataLayer||[];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js',new Date());
+        gtag('config','G-XXXXXXXXXX',{page_title:'Events & Games Night',page_location:window.location.href,send_page_view:true});
+        (function(){var p=new URLSearchParams(window.location.search);['utm_source','utm_medium','utm_campaign','utm_content','utm_term'].forEach(function(k){if(p.get(k))sessionStorage.setItem(k,p.get(k));});})();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'gieltys-red': '#E30000',
+                        'gieltys-red-dark': '#B80000',
+                        'gieltys-cream': '#FFF8F0',
+                        'gieltys-dark': '#1A1A1A',
+                        'gieltys-warm': '#2C1810',
+                        'gieltys-gold': '#C8A45A',
+                        'gieltys-green': '#2D5A27',
+                        'gieltys-navy': '#1e3a5f',
+                    },
+                    fontFamily: {
+                        'playfair': ['Playfair Display', 'serif'],
+                        'inter': ['Inter', 'system-ui', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', system-ui, sans-serif; }
+        .font-playfair { font-family: 'Playfair Display', serif; }
+        .hero-overlay { background: linear-gradient(to bottom, rgba(26,26,26,0.3) 0%, rgba(44,24,16,0.7) 70%, rgba(26,26,26,0.95) 100%); }
+        .glass-warm { background: rgba(44,24,16,0.85); backdrop-filter: blur(12px); border: 1px solid rgba(200,164,90,0.2); }
+        .glass-dark { background: rgba(26,26,26,0.9); backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.08); }
+        .card-hover { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .card-hover:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(0,0,0,0.3); }
+        .text-shadow { text-shadow: 0 2px 8px rgba(0,0,0,0.5); }
+        .nav-blur { backdrop-filter: blur(16px); background: rgba(26,26,26,0.9); }
+        @keyframes fadeUp { from { opacity:0; transform:translateY(20px); } to { opacity:1; transform:translateY(0); } }
+        .fade-up { animation: fadeUp 0.6s ease both; }
+        .fade-up-delay-1 { animation-delay: 0.15s; }
+        .fade-up-delay-2 { animation-delay: 0.3s; }
+        .fade-up-delay-3 { animation-delay: 0.45s; }
+        .badge { display: inline-block; padding: 2px 10px; border-radius: 9999px; font-size: 0.65rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+        .badge-weekly { background: rgba(200,164,90,0.2); color: #C8A45A; border: 1px solid rgba(200,164,90,0.3); }
+        .badge-monthly { background: rgba(45,90,39,0.25); color: #6abf5e; border: 1px solid rgba(45,90,39,0.4); }
+        .badge-special { background: rgba(227,0,0,0.2); color: #ff6b6b; border: 1px solid rgba(227,0,0,0.3); }
+        .badge-live { background: rgba(227,0,0,0.3); color: #fff; border: 1px solid rgba(227,0,0,0.5); animation: pulse-live 2s ease-in-out infinite; }
+        @keyframes pulse-live { 0%,100% { opacity:1; } 50% { opacity:0.7; } }
+        .event-card { position: relative; overflow: hidden; }
+        .event-card::before { content:''; position:absolute; top:0; left:0; right:0; height:3px; background: linear-gradient(90deg, #C8A45A, #E30000); opacity:0; transition: opacity 0.3s ease; }
+        .event-card:hover::before { opacity:1; }
+    </style>
+    <script type="application/ld+json">
+    [{
+        "@context": "https://schema.org",
+        "@type": "Event",
+        "name": "Blackjack Night â€” 21s at Gielty's",
+        "description": "Casual blackjack tournament at Gielty's. Free entry, prizes for the winner. Fun, not gambling â€” play for bragging rights and a round on the house.",
+        "startDate": "2026-03-28T21:00:00+00:00",
+        "eventSchedule": {
+            "@type": "Schedule",
+            "repeatFrequency": "P1W",
+            "byDay": "https://schema.org/Saturday",
+            "startTime": "21:00",
+            "scheduleTimezone": "Europe/Dublin"
+        },
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "isAccessibleForFree": true,
+        "maximumAttendeeCapacity": 16,
+        "location": {
+            "@type": "Place",
+            "name": "Gielty's Clew Bay Bar & Restaurant",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Keelwest, Dooagh",
+                "addressLocality": "Achill Island",
+                "addressRegion": "County Mayo",
+                "postalCode": "F28 F6C1",
+                "addressCountry": "IE"
+            }
+        },
+        "organizer": {
+            "@type": "Organization",
+            "name": "Gielty's Bar & Restaurant",
+            "url": "https://www.gieltys.com"
+        }
+    },
+    {
+        "@context": "https://schema.org",
+        "@type": "Event",
+        "name": "Traditional Irish Music Session",
+        "description": "Live traditional Irish music session at Gielty's. Bring your instrument or just bring yourself.",
+        "startDate": "2026-03-27T21:30:00+00:00",
+        "eventSchedule": {
+            "@type": "Schedule",
+            "repeatFrequency": "P1W",
+            "byDay": ["https://schema.org/Friday", "https://schema.org/Saturday"],
+            "startTime": "21:30",
+            "scheduleTimezone": "Europe/Dublin"
+        },
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "isAccessibleForFree": true,
+        "location": {
+            "@type": "Place",
+            "name": "Gielty's Clew Bay Bar & Restaurant",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Keelwest, Dooagh",
+                "addressLocality": "Achill Island",
+                "addressRegion": "County Mayo",
+                "postalCode": "F28 F6C1",
+                "addressCountry": "IE"
+            }
+        },
+        "organizer": {
+            "@type": "Organization",
+            "name": "Gielty's Bar & Restaurant",
+            "url": "https://www.gieltys.com"
+        }
+    },
+    {
+        "@context": "https://schema.org",
+        "@type": "Event",
+        "name": "Quiz Night at Gielty's",
+        "description": "Pub quiz at Gielty's. Teams of 2-6, cash prize for winners. First Wednesday of every month at 8pm.",
+        "startDate": "2026-04-01T20:00:00+01:00",
+        "eventSchedule": {
+            "@type": "Schedule",
+            "repeatFrequency": "P1M",
+            "byDay": "https://schema.org/Wednesday",
+            "startTime": "20:00",
+            "scheduleTimezone": "Europe/Dublin"
+        },
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "location": {
+            "@type": "Place",
+            "name": "Gielty's Clew Bay Bar & Restaurant",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Keelwest, Dooagh",
+                "addressLocality": "Achill Island",
+                "addressRegion": "County Mayo",
+                "postalCode": "F28 F6C1",
+                "addressCountry": "IE"
+            }
+        },
+        "organizer": {
+            "@type": "Organization",
+            "name": "Gielty's Bar & Restaurant",
+            "url": "https://www.gieltys.com"
+        }
+    },
+    {
+        "@context": "https://schema.org",
+        "@type": "ScreeningEvent",
+        "name": "FIFA World Cup 2026 â€” Live at Gielty's",
+        "description": "Every World Cup 2026 match live on the big screen at Gielty's. Prediction league, special match day food & drink deals.",
+        "startDate": "2026-06-11",
+        "endDate": "2026-07-19",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "location": {
+            "@type": "Place",
+            "name": "Gielty's Clew Bay Bar & Restaurant",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Keelwest, Dooagh",
+                "addressLocality": "Achill Island",
+                "addressRegion": "County Mayo",
+                "postalCode": "F28 F6C1",
+                "addressCountry": "IE"
+            }
+        },
+        "organizer": {
+            "@type": "Organization",
+            "name": "Gielty's Bar & Restaurant",
+            "url": "https://www.gieltys.com"
+        }
+    }]
+    </script>
+</head>
+<body class="bg-gieltys-dark text-white">
+
+<!-- Navigation -->
+<nav class="fixed top-0 w-full z-50 nav-blur border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16 md:h-20">
+            <a href="/" class="flex items-center gap-2">
+                <span class="font-playfair text-xl md:text-2xl font-bold text-white">GIELTY'S</span>
+                <span class="text-gieltys-red font-bold text-xs tracking-widest hidden sm:inline">CLEW BAY</span>
+            </a>
+            <div class="hidden md:flex items-center gap-6 text-sm font-medium">
+                <a href="/menu" class="hover:text-gieltys-gold transition-colors">Menu</a>
+                <a href="/music-and-events" class="hover:text-gieltys-gold transition-colors">Music & Events</a>
+                <a href="/events" class="text-gieltys-gold transition-colors">Games Night</a>
+                <a href="/about" class="hover:text-gieltys-gold transition-colors">Our Story</a>
+                <a href="/coffee-shop" class="hover:text-gieltys-gold transition-colors">Coffee Shop</a>
+                <a href="/achill-guide" class="hover:text-gieltys-gold transition-colors">Explore Achill</a>
+                <a href="/contact" class="hover:text-gieltys-gold transition-colors">Find Us</a>
+                <a href="/book" class="bg-gieltys-red hover:bg-gieltys-red-dark text-white px-5 py-2.5 rounded-full text-sm font-semibold transition-colors">Book a Table</a>
+            </div>
+            <button id="mobileMenuBtn" class="md:hidden text-white p-2" aria-label="Open menu">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+            </button>
+        </div>
+    </div>
+    <div id="mobileMenu" class="hidden md:hidden border-t border-white/10 bg-gieltys-dark/95">
+        <div class="px-4 py-4 space-y-3">
+            <a href="/menu" class="block py-2 text-white/80 hover:text-white">Menu</a>
+            <a href="/music-and-events" class="block py-2 text-white/80 hover:text-white">Music & Events</a>
+            <a href="/events" class="block py-2 text-gieltys-gold font-semibold">Games Night</a>
+            <a href="/about" class="block py-2 text-white/80 hover:text-white">Our Story</a>
+            <a href="/coffee-shop" class="block py-2 text-white/80 hover:text-white">Coffee Shop</a>
+            <a href="/achill-guide" class="block py-2 text-white/80 hover:text-white">Explore Achill</a>
+            <a href="/contact" class="block py-2 text-white/80 hover:text-white">Find Us</a>
+            <a href="/book" class="block py-2 text-gieltys-red font-semibold">Book a Table</a>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="relative min-h-[75vh] flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0 bg-gieltys-warm"></div>
+    <div class="absolute inset-0 hero-overlay"></div>
+    <div class="absolute inset-0 opacity-30" style="background: url('img/gieltys-bar-interior.jpg') center/cover no-repeat;"></div>
+    <div class="absolute inset-0" style="background: radial-gradient(ellipse at 30% 80%, rgba(200,164,90,0.08) 0%, transparent 60%), radial-gradient(ellipse at 70% 20%, rgba(227,0,0,0.05) 0%, transparent 50%);"></div>
+    <div class="relative z-10 text-center px-4 max-w-4xl mx-auto pt-20">
+        <p class="text-gieltys-gold tracking-[0.3em] uppercase text-xs md:text-sm font-semibold mb-4 fade-up">Dooagh, Achill Island</p>
+        <h1 class="font-playfair text-4xl sm:text-5xl md:text-7xl font-bold text-white text-shadow leading-tight mb-6 fade-up fade-up-delay-1">
+            What's On<br>at Gielty's
+        </h1>
+        <p class="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-8 fade-up fade-up-delay-2">
+            Games nights, live music, quizzes, and the craic.<br class="hidden sm:inline">
+            There's always something happening at the edge of Europe.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center fade-up fade-up-delay-3">
+            <a href="#this-week" class="bg-gieltys-red hover:bg-gieltys-red-dark text-white px-8 py-4 rounded-full text-lg font-semibold transition-colors">
+                See This Week
+            </a>
+            <a href="#rsvp" class="border-2 border-white/30 hover:border-gieltys-gold text-white px-8 py-4 rounded-full text-lg font-semibold transition-colors">
+                RSVP for an Event
+            </a>
+        </div>
+    </div>
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+        <svg class="w-6 h-6 text-white/40" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
+    </div>
+</section>
+
+<!-- This Week -->
+<section id="this-week" class="py-20 px-4 bg-gieltys-dark">
+    <div class="max-w-6xl mx-auto">
+        <p class="text-gieltys-gold tracking-widest uppercase text-xs font-semibold mb-4 text-center">Don't Miss Out</p>
+        <h2 class="font-playfair text-3xl md:text-4xl font-bold text-center mb-4">This Week at Gielty's</h2>
+        <p class="text-white/60 text-center mb-12 max-w-xl mx-auto">Here's what's coming up in the next few days. Grab a stool early â€” things fill up fast.</p>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Friday Trad -->
+            <div class="event-card glass-warm rounded-2xl p-6 card-hover">
+                <div class="flex items-center justify-between mb-4">
+                    <span class="badge badge-weekly">Weekly</span>
+                    <span class="text-white/40 text-xs font-medium">Friday</span>
+                </div>
+                <div class="text-3xl mb-3">ðŸŽµ</div>
+                <h3 class="font-playfair text-xl font-bold mb-2">Traditional Irish Session</h3>
+                <p class="text-gieltys-gold text-sm font-semibold mb-3">9:30pm â€” No booking needed</p>
+                <p class="text-white/60 text-sm leading-relaxed">Bring your instrument or just bring yourself. The session breaks out naturally â€” fiddles, bodhr&aacute;ns, tin whistles, and the odd song.</p>
+            </div>
+
+            <!-- Saturday Trad -->
+            <div class="event-card glass-warm rounded-2xl p-6 card-hover">
+                <div class="flex items-center justify-between mb-4">
+                    <span class="badge badge-weekly">Weekly</span>
+                    <span class="text-white/40 text-xs font-medium">Saturday</span>
+                </div>
+                <div class="text-3xl mb-3">ðŸŽ¶</div>
+                <h3 class="font-playfair text-xl font-bold mb-2">Traditional Irish Session</h3>
+                <p class="text-gieltys-gold text-sm font-semibold mb-3">9:30pm â€” Just turn up</p>
+                <p class="text-white/60 text-sm leading-relaxed">Another night of live trad at the most westerly pub in Europe. Pull up beside the turf fire and let the craic come to you.</p>
+            </div>
+
+            <!-- Saturday Blackjack -->
+            <div class="event-card glass-warm rounded-2xl p-6 card-hover">
+                <div class="flex items-center justify-between mb-4">
+                    <span class="badge badge-weekly">Weekly</span>
+                    <span class="text-white/40 text-xs font-medium">Saturday</span>
+                </div>
+                <div class="text-3xl mb-3">ðŸƒ</div>
+                <h3 class="font-playfair text-xl font-bold mb-2">Blackjack Night</h3>
+                <p class="text-gieltys-gold text-sm font-semibold mb-3">9pm â€” Free entry</p>
+                <p class="text-white/60 text-sm leading-relaxed">21s at Gielty's â€” casual blackjack tournament. Play for bragging rights and a round on the house. Max 16 players per table.</p>
+                <a href="#rsvp" class="inline-block mt-4 text-gieltys-gold text-sm font-semibold hover:text-white transition-colors">Reserve your seat &rarr;</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Regular Events -->
+<section class="py-20 px-4 bg-gieltys-warm/30">
+    <div class="max-w-6xl mx-auto">
+        <p class="text-gieltys-gold tracking-widest uppercase text-xs font-semibold mb-4 text-center">Every Week & Month</p>
+        <h2 class="font-playfair text-3xl md:text-4xl font-bold text-center mb-4">Regular Events</h2>
+        <p class="text-white/60 text-center mb-12 max-w-xl mx-auto">The recurring nights that keep Gielty's buzzing year-round.</p>
+
+        <div class="grid md:grid-cols-2 gap-6">
+            <!-- Blackjack Night -->
+            <div class="event-card glass-warm rounded-2xl p-8 card-hover">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="badge badge-weekly">Weekly</span>
+                </div>
+                <div class="flex items-start gap-5">
+                    <div class="text-4xl flex-shrink-0 mt-1">ðŸƒ</div>
+                    <div>
+                        <h3 class="font-playfair text-2xl font-bold mb-1">Blackjack Night</h3>
+                        <p class="text-gieltys-gold font-semibold mb-3">Every Saturday &bull; 9pm</p>
+                        <p class="text-white/70 leading-relaxed mb-3">
+                            <strong class="text-white">21s at Gielty's</strong> â€” our casual blackjack tournament.
+                            Free entry, prizes for the winner.
+                        </p>
+                        <p class="text-white/50 text-sm italic mb-4">"Fun, not gambling â€” play for bragging rights and a round on the house."</p>
+                        <div class="flex flex-wrap gap-3 text-xs text-white/40">
+                            <span class="bg-white/5 rounded-full px-3 py-1">Free Entry</span>
+                            <span class="bg-white/5 rounded-full px-3 py-1">Max 16 Players</span>
+                            <span class="bg-white/5 rounded-full px-3 py-1">Prizes</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Traditional Irish Session -->
+            <div class="event-card glass-warm rounded-2xl p-8 card-hover">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="badge badge-weekly">Weekly</span>
+                    <span class="badge badge-live">Live</span>
+                </div>
+                <div class="flex items-start gap-5">
+                    <div class="text-4xl flex-shrink-0 mt-1">ðŸŽµ</div>
+                    <div>
+                        <h3 class="font-playfair text-2xl font-bold mb-1">Traditional Irish Session</h3>
+                        <p class="text-gieltys-gold font-semibold mb-3">Every Friday &amp; Saturday &bull; 9:30pm</p>
+                        <p class="text-white/70 leading-relaxed mb-3">
+                            Live traditional music at the edge of Europe. Fiddles, bodhr&aacute;ns, tin whistles, and voices raised in song by the turf fire.
+                        </p>
+                        <p class="text-white/50 text-sm italic mb-4">"Bring your instrument or just bring yourself."</p>
+                        <div class="flex flex-wrap gap-3 text-xs text-white/40">
+                            <span class="bg-white/5 rounded-full px-3 py-1">No Booking Needed</span>
+                            <span class="bg-white/5 rounded-full px-3 py-1">All Welcome</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quiz Night -->
+            <div class="event-card glass-warm rounded-2xl p-8 card-hover">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="badge badge-monthly">Monthly</span>
+                </div>
+                <div class="flex items-start gap-5">
+                    <div class="text-4xl flex-shrink-0 mt-1">ðŸ§ </div>
+                    <div>
+                        <h3 class="font-playfair text-2xl font-bold mb-1">Quiz Night</h3>
+                        <p class="text-gieltys-gold font-semibold mb-3">First Wednesday of the Month &bull; 8pm</p>
+                        <p class="text-white/70 leading-relaxed mb-3">
+                            Assemble your team (2â€“6 people) and put your general knowledge to the test.
+                            Cash prize for the winners.
+                        </p>
+                        <p class="text-white/50 text-sm italic mb-4">Hosted by [TBC]</p>
+                        <div class="flex flex-wrap gap-3 text-xs text-white/40">
+                            <span class="bg-white/5 rounded-full px-3 py-1">Teams of 2â€“6</span>
+                            <span class="bg-white/5 rounded-full px-3 py-1">Cash Prize</span>
+                            <span class="bg-white/5 rounded-full px-3 py-1">All Levels</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Atlantic vs Ionian -->
+            <div class="event-card glass-warm rounded-2xl p-8 card-hover">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="badge badge-monthly">Monthly</span>
+                    <span class="badge badge-live">Live</span>
+                </div>
+                <div class="flex items-start gap-5">
+                    <div class="text-4xl flex-shrink-0 mt-1">ðŸŒŠ</div>
+                    <div>
+                        <h3 class="font-playfair text-2xl font-bold mb-1">Atlantic vs Ionian Games Night</h3>
+                        <p class="text-gieltys-gold font-semibold mb-3">Monthly (Date TBC)</p>
+                        <p class="text-white/70 leading-relaxed mb-3">
+                            Gielty's goes head-to-head with our twin bar, Flavors in Zante â€” live streamed across two oceans.
+                        </p>
+                        <div class="space-y-2 text-white/60 text-sm mb-4">
+                            <p class="flex items-center gap-2"><span class="text-gieltys-gold">&#9679;</span> Pub quiz head-to-head</p>
+                            <p class="flex items-center gap-2"><span class="text-gieltys-gold">&#9679;</span> Cocktail speed challenge</p>
+                            <p class="flex items-center gap-2"><span class="text-gieltys-gold">&#9679;</span> Karaoke battle</p>
+                        </div>
+                        <div class="flex flex-wrap gap-3 text-xs text-white/40">
+                            <span class="bg-white/5 rounded-full px-3 py-1">Live Streamed</span>
+                            <span class="bg-white/5 rounded-full px-3 py-1">Achill vs Zante</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Special Events: World Cup 2026 -->
+<section class="py-20 px-4 bg-gieltys-dark">
+    <div class="max-w-6xl mx-auto">
+        <p class="text-gieltys-gold tracking-widest uppercase text-xs font-semibold mb-4 text-center">Coming This Summer</p>
+        <h2 class="font-playfair text-3xl md:text-4xl font-bold text-center mb-4">Special Events</h2>
+        <p class="text-white/60 text-center mb-12 max-w-xl mx-auto">Seasonal one-offs and big occasions worth marking in the diary.</p>
+
+        <div class="max-w-4xl mx-auto">
+            <div class="event-card glass-warm rounded-2xl overflow-hidden card-hover">
+                <div class="bg-gradient-to-r from-gieltys-navy/80 to-gieltys-warm/80 p-8 md:p-10">
+                    <div class="flex items-center gap-3 mb-6">
+                        <span class="badge badge-special">Special</span>
+                        <span class="badge badge-live">Live</span>
+                        <span class="text-white/40 text-xs font-medium">June â€“ July 2026</span>
+                    </div>
+                    <div class="md:flex items-start gap-8">
+                        <div class="text-6xl md:text-7xl flex-shrink-0 mb-4 md:mb-0">âš½</div>
+                        <div class="flex-1">
+                            <h3 class="font-playfair text-3xl md:text-4xl font-bold mb-3">World Cup 2026</h3>
+                            <p class="text-gieltys-gold text-lg font-semibold mb-4">Every match. Live. On the big screen.</p>
+                            <p class="text-white/70 leading-relaxed mb-6 text-lg">
+                                The world's biggest tournament comes to Gielty's. Watch every kick on the big screen,
+                                join our prediction league, and enjoy special match day food &amp; drink deals.
+                            </p>
+                            <div class="grid sm:grid-cols-3 gap-4 mb-6">
+                                <div class="bg-white/5 rounded-xl p-4 text-center">
+                                    <div class="text-2xl mb-1">ðŸ“º</div>
+                                    <p class="text-white text-sm font-semibold">Big Screen</p>
+                                    <p class="text-white/50 text-xs">Every match live</p>
+                                </div>
+                                <div class="bg-white/5 rounded-xl p-4 text-center">
+                                    <div class="text-2xl mb-1">ðŸ†</div>
+                                    <p class="text-white text-sm font-semibold">Prediction League</p>
+                                    <p class="text-white/50 text-xs">"Beat the bar!"</p>
+                                </div>
+                                <div class="bg-white/5 rounded-xl p-4 text-center">
+                                    <div class="text-2xl mb-1">ðŸ”</div>
+                                    <p class="text-white text-sm font-semibold">Match Day Deals</p>
+                                    <p class="text-white/50 text-xs">Food &amp; drink specials</p>
+                                </div>
+                            </div>
+                            <a href="/worldcup2026" class="inline-flex items-center gap-2 bg-gieltys-red hover:bg-gieltys-red-dark text-white px-6 py-3 rounded-full font-semibold transition-colors text-sm">
+                                <span>View Match Tracker &amp; Predictions</span>
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- RSVP Form -->
+<section id="rsvp" class="py-20 px-4 bg-gieltys-warm/30">
+    <div class="max-w-6xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-12 items-start">
+            <div>
+                <p class="text-gieltys-gold tracking-widest uppercase text-xs font-semibold mb-4">Save Your Spot</p>
+                <h2 class="font-playfair text-3xl md:text-4xl font-bold mb-6">RSVP for an Event</h2>
+                <p class="text-white/70 leading-relaxed mb-6">
+                    Most of our events are walk-in, but if you want to guarantee your spot â€” especially
+                    for Blackjack Night (max 16 per table) or Quiz Night (team sizes matter) â€” drop us your details.
+                </p>
+                <div class="glass-warm rounded-xl p-6 mb-6">
+                    <h3 class="font-playfair text-lg font-bold mb-3">Good to Know</h3>
+                    <ul class="space-y-3 text-white/60 text-sm">
+                        <li class="flex items-start gap-3"><span class="text-gieltys-gold mt-0.5">âœ“</span> <span>Trad sessions are walk-in â€” no booking needed</span></li>
+                        <li class="flex items-start gap-3"><span class="text-gieltys-gold mt-0.5">âœ“</span> <span>Blackjack fills up fast â€” RSVP recommended</span></li>
+                        <li class="flex items-start gap-3"><span class="text-gieltys-gold mt-0.5">âœ“</span> <span>Quiz teams can be registered on the night</span></li>
+                        <li class="flex items-start gap-3"><span class="text-gieltys-gold mt-0.5">âœ“</span> <span>World Cup â€” just turn up, but arrive early for big matches</span></li>
+                    </ul>
+                </div>
+                <div class="glass-warm rounded-xl p-6">
+                    <p class="text-white/50 text-sm mb-2">Prefer to call?</p>
+                    <a href="tel:+35398-43119" class="text-white text-xl font-bold hover:text-gieltys-gold transition-colors" onclick="gtag('event','click_to_call',{event_category:'events_rsvp'});">(098) 43119</a>
+                </div>
+            </div>
+
+            <div class="glass-warm rounded-2xl p-8">
+                <h3 class="font-playfair text-xl font-bold mb-6">Reserve Your Spot</h3>
+                <form id="rsvpForm" class="space-y-4">
+                    <div>
+                        <label for="rsvp-name" class="block text-sm text-white/60 mb-1">Your Name</label>
+                        <input type="text" id="rsvp-name" name="name" required class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-gieltys-gold transition-colors" placeholder="Full name">
+                    </div>
+                    <div>
+                        <label for="rsvp-email" class="block text-sm text-white/60 mb-1">Email</label>
+                        <input type="email" id="rsvp-email" name="email" required class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-gieltys-gold transition-colors" placeholder="you@email.com">
+                    </div>
+                    <div>
+                        <label for="rsvp-event" class="block text-sm text-white/60 mb-1">Which Event?</label>
+                        <select id="rsvp-event" name="event" required class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gieltys-gold transition-colors">
+                            <option value="" class="bg-gieltys-dark">Select an event</option>
+                            <option value="blackjack-night" class="bg-gieltys-dark">Blackjack Night (Saturday 9pm)</option>
+                            <option value="trad-session-friday" class="bg-gieltys-dark">Trad Session (Friday 9:30pm)</option>
+                            <option value="trad-session-saturday" class="bg-gieltys-dark">Trad Session (Saturday 9:30pm)</option>
+                            <option value="quiz-night" class="bg-gieltys-dark">Quiz Night (1st Wednesday 8pm)</option>
+                            <option value="atlantic-vs-ionian" class="bg-gieltys-dark">Atlantic vs Ionian Games Night</option>
+                            <option value="world-cup-2026" class="bg-gieltys-dark">World Cup 2026 Viewing</option>
+                            <option value="other" class="bg-gieltys-dark">Other / General Enquiry</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="rsvp-group" class="block text-sm text-white/60 mb-1">Group Size</label>
+                        <input type="number" id="rsvp-group" name="group_size" min="1" max="30" class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-gieltys-gold transition-colors" placeholder="How many people?">
+                    </div>
+                    <button type="submit" id="rsvpSubmitBtn" class="w-full bg-gieltys-red hover:bg-gieltys-red-dark text-white px-6 py-3 rounded-full font-semibold transition-colors text-lg">
+                        RSVP Now
+                    </button>
+                </form>
+                <div id="rsvpSuccess" class="hidden mt-6 text-center py-8">
+                    <div class="text-4xl mb-3">ðŸŽ‰</div>
+                    <p class="font-playfair text-xl font-bold text-gieltys-gold mb-2">You're In!</p>
+                    <p class="text-white/60 text-sm">We'll see you at Gielty's. If anything changes, just give us a ring.</p>
+                </div>
+                <div id="rsvpError" class="hidden mt-4 text-center">
+                    <p class="text-red-400 text-sm">Something went wrong. Please try again or call us on (098) 43119.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Create Your Own Event -->
+<section class="py-20 px-4 bg-gieltys-dark">
+    <div class="max-w-4xl mx-auto text-center">
+        <p class="text-gieltys-gold tracking-widest uppercase text-xs font-semibold mb-4">Your Idea, Our Pub</p>
+        <h2 class="font-playfair text-3xl md:text-4xl font-bold mb-4">Got an Event Idea?</h2>
+        <p class="text-white/60 mb-8 max-w-2xl mx-auto text-lg leading-relaxed">
+            Darts league? Open mic night? Board game marathon? We're always up for trying something new.
+            If you've got an idea for a regular night or a one-off event, we'd love to hear it.
+        </p>
+        <div class="glass-warm rounded-2xl p-8 md:p-10 max-w-2xl mx-auto text-left">
+            <form id="suggestForm" class="space-y-4">
+                <div class="grid sm:grid-cols-2 gap-4">
+                    <div>
+                        <label for="suggest-name" class="block text-sm text-white/60 mb-1">Your Name</label>
+                        <input type="text" id="suggest-name" name="name" required class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-gieltys-gold transition-colors" placeholder="Full name">
+                    </div>
+                    <div>
+                        <label for="suggest-email" class="block text-sm text-white/60 mb-1">Email</label>
+                        <input type="email" id="suggest-email" name="email" required class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-gieltys-gold transition-colors" placeholder="you@email.com">
+                    </div>
+                </div>
+                <div>
+                    <label for="suggest-idea" class="block text-sm text-white/60 mb-1">Your Event Idea</label>
+                    <textarea id="suggest-idea" name="idea" rows="4" required class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-gieltys-gold transition-colors resize-none" placeholder="Tell us about your event idea â€” what is it, when would it work, who would come?"></textarea>
+                </div>
+                <button type="submit" class="w-full bg-gieltys-gold hover:bg-gieltys-gold/80 text-gieltys-dark px-6 py-3 rounded-full font-bold transition-colors text-lg">
+                    Submit Your Idea
+                </button>
+            </form>
+            <div id="suggestSuccess" class="hidden mt-6 text-center py-4">
+                <div class="text-3xl mb-2">ðŸ’¡</div>
+                <p class="font-playfair text-xl font-bold text-gieltys-gold mb-1">Great Idea!</p>
+                <p class="text-white/60 text-sm">We'll have a think and get back to you.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Shuttle Bus Reminder -->
+<section class="py-16 px-4 bg-gieltys-warm/20">
+    <div class="max-w-4xl mx-auto">
+        <div class="glass-warm rounded-2xl p-8 flex flex-col md:flex-row items-center gap-8">
+            <div class="text-5xl">ðŸš</div>
+            <div class="text-center md:text-left">
+                <h3 class="font-playfair text-2xl font-bold mb-2">Don't Worry About Getting Home</h3>
+                <p class="text-white/70 leading-relaxed mb-4">Our free shuttle bus will collect you from anywhere on Achill and get you home safely after the craic. Just ask at the bar.</p>
+                <a href="/contact" class="text-gieltys-gold hover:text-white font-semibold text-sm transition-colors">Learn More About the Shuttle &rarr;</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Banner -->
+<section class="py-16 px-4 bg-gieltys-red">
+    <div class="max-w-4xl mx-auto text-center">
+        <h2 class="font-playfair text-3xl md:text-4xl font-bold mb-4">The Craic Won't Wait</h2>
+        <p class="text-white/80 text-lg mb-8">Book a table, round up the gang, and we'll see you at Gielty's.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/book" class="bg-white text-gieltys-red hover:bg-gieltys-cream px-8 py-4 rounded-full text-lg font-bold transition-colors">Book a Table</a>
+            <a href="tel:+353-98-43119" class="border-2 border-white/50 hover:border-white text-white px-8 py-4 rounded-full text-lg font-semibold transition-colors" onclick="gtag('event','click_to_call',{event_category:'events_cta'});">Call Us: 098 43119</a>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="py-16 px-4 bg-gieltys-dark border-t border-white/10">
+    <div class="max-w-6xl mx-auto">
+        <div class="grid md:grid-cols-4 lg:grid-cols-5 gap-8 mb-12">
+            <div>
+                <span class="font-playfair text-xl font-bold">GIELTY'S</span>
+                <span class="text-gieltys-red font-bold text-xs tracking-widest ml-1">CLEW BAY</span>
+                <p class="text-white/50 text-sm mt-3 leading-relaxed">The most westerly pub in Europe.<br>Dooagh, Achill Island, Co. Mayo.</p>
+            </div>
+            <div>
+                <h3 class="text-sm font-semibold uppercase tracking-wider text-white/80 mb-4">Explore</h3>
+                <div class="space-y-2 text-sm">
+                    <a href="/menu" class="block text-white/50 hover:text-white transition-colors">Menu</a>
+                    <a href="/music-and-events" class="block text-white/50 hover:text-white transition-colors">Music & Events</a>
+                    <a href="/events" class="block text-white/50 hover:text-white transition-colors">Games Night</a>
+                    <a href="/coffee-shop" class="block text-white/50 hover:text-white transition-colors">Coffee Shop</a>
+                    <a href="/gallery" class="block text-white/50 hover:text-white transition-colors">Gallery</a>
+                </div>
+            </div>
+            <div>
+                <h3 class="text-sm font-semibold uppercase tracking-wider text-white/80 mb-4">Visit</h3>
+                <div class="space-y-2 text-sm">
+                    <a href="/contact" class="block text-white/50 hover:text-white transition-colors">Find Us</a>
+                    <a href="/jobs" class="block text-white/50 hover:text-white transition-colors">Jobs</a>
+                    <a href="/book" class="block text-white/50 hover:text-white transition-colors">Book a Table</a>
+                    <a href="/achill-guide" class="block text-white/50 hover:text-white transition-colors">Explore Achill</a>
+                    <a href="/about" class="block text-white/50 hover:text-white transition-colors">Our Story</a>
+                </div>
+            </div>
+            <div>
+                <h3 class="text-sm font-semibold uppercase tracking-wider text-white/80 mb-4">Connect</h3>
+                <div class="space-y-2 text-sm">
+                    <a href="https://www.facebook.com/GieltysBarAchill/" target="_blank" rel="noopener" class="block text-white/50 hover:text-white transition-colors">Facebook</a>
+                    <a href="https://www.tripadvisor.ie/Restaurant_Review-g1513851-d1829213-Reviews-Gielty_s_Clew_Bay_Bar_Restaurant-Dooagh_Achill_Island_County_Mayo_Western_Irelan.html" target="_blank" rel="noopener" class="block text-white/50 hover:text-white transition-colors">TripAdvisor</a>
+                    <a href="https://www.google.ie/maps/?cid=8505515428550204447" target="_blank" rel="noopener" class="block text-white/50 hover:text-white transition-colors">Google Reviews</a>
+                    <a href="mailto:info@gieltys.com" class="block text-white/50 hover:text-white transition-colors">info@gieltys.com</a>
+                </div>
+            </div>
+            <div class="md:col-span-4 lg:col-span-1">
+                <h4 class="text-xs font-semibold uppercase tracking-wider text-white/30 mb-4">Twin Bar</h4>
+                <div class="bg-white/5 rounded-xl p-4 border border-white/10">
+                    <p class="text-white font-semibold text-sm mb-1">Flavors Daiquiri Bar</p>
+                    <p class="text-white/40 text-xs mb-2">Laganas, Zante, Greece</p>
+                    <p class="text-white/30 text-xs mb-3">Same team, same energy, different ocean. Our twin bar in the Greek islands.</p>
+                    <a href="https://achilloffshore.com/exchange" class="text-gieltys-gold text-xs font-semibold hover:text-white transition">Work at Both &rarr;</a>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="text-white/30 text-xs">&copy; 2026 Gielty's Bar & Restaurant. All rights reserved.</p>
+            <div class="flex gap-6 text-xs text-white/30">
+                <a href="/privacy" class="hover:text-white transition-colors">Privacy Policy</a>
+                <span>|</span>
+                <a href="/invest" class="hover:text-gieltys-gold transition-colors">Investment Opportunity</a>
+                <span>|</span>
+                <span>Keelwest, Dooagh, Achill Island, F28 F6C1</span>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/3539843119?text=Hi%20Gielty's%2C%20I'd%20like%20to%20ask%20about%20events" target="_blank" rel="noopener"
+   class="fixed bottom-6 right-6 z-50 bg-[#25D366] hover:bg-[#128C7E] text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all hover:scale-110"
+   onclick="gtag('event','whatsapp_click',{event_category:'contact',event_label:'events_page'});"
+   aria-label="Chat on WhatsApp">
+    <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<script>
+    document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+        document.getElementById('mobileMenu').classList.toggle('hidden');
+    });
+
+    function submitForm(formEl, successEl, errorEl, payload) {
+        var btn = formEl.querySelector('button[type="submit"]');
+        btn.disabled = true;
+        btn.textContent = 'Sending...';
+
+        fetch('https://dodealswithlee.onrender.com/api/client-form', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+        })
+        .then(function(res) {
+            if (!res.ok) throw new Error('Server error');
+            formEl.classList.add('hidden');
+            successEl.classList.remove('hidden');
+            gtag('event', 'form_submit', {
+                event_category: 'engagement',
+                event_label: payload.form_type
+            });
+        })
+        .catch(function() {
+            btn.disabled = false;
+            btn.textContent = formEl.id === 'rsvpForm' ? 'RSVP Now' : 'Submit Your Idea';
+            if (errorEl) errorEl.classList.remove('hidden');
+        });
+    }
+
+    document.getElementById('rsvpForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        var f = e.target;
+        submitForm(f, document.getElementById('rsvpSuccess'), document.getElementById('rsvpError'), {
+            client: 'gieltys',
+            form_type: 'event-rsvp',
+            name: f.name.value,
+            email: f.email.value,
+            event: f.event.value,
+            group_size: f.group_size.value
+        });
+    });
+
+    document.getElementById('suggestForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        var f = e.target;
+        submitForm(f, document.getElementById('suggestSuccess'), null, {
+            client: 'gieltys',
+            form_type: 'event-suggestion',
+            name: f.name.value,
+            email: f.email.value,
+            idea: f.idea.value
+        });
+    });
+</script>
+
+<!-- ES AI Chatbot -->
+<script src="/assets/es-chatbot-widget.js" data-client="gieltys"></script>
+
+<!-- Cloudflare Web Analytics -->
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "gieltys-bar"}'></script>
+
+<!-- Accessibility Helper -->
+<div id="es-access" style="position:fixed;bottom:20px;left:20px;z-index:99990;display:flex;flex-direction:column;gap:8px;">
+  <button onclick="document.body.style.fontSize=(parseFloat(getComputedStyle(document.body).fontSize)+2)+'px'" style="width:44px;height:44px;border-radius:50%;border:2px solid #1e3a5f;background:#fff;font-size:20px;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.15)" aria-label="Increase text size" title="Bigger text">A+</button>
+  <button onclick="document.body.style.fontSize=(parseFloat(getComputedStyle(document.body).fontSize)-2)+'px'" style="width:44px;height:44px;border-radius:50%;border:2px solid #1e3a5f;background:#fff;font-size:20px;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.15)" aria-label="Decrease text size" title="Smaller text">A-</button>
+</div>
+</body>
+</html>
